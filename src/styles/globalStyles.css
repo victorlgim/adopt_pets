@@ -15,8 +15,10 @@ body {
     --color-brand-2: #B48CF2;
     --color-grey-1:  #1B1C1E;
     --color-grey-2:  #90A4AE;
+    --color-grey-3: #f1eef7;
     --color-green-1: #33CC66;
     --color-white:   #FFFFFF;
+  
   
     --title-1-logo: 1.75rem;            /*  28px  */
     --title-1-card: 1.5rem;             /*  24px  */
