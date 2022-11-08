@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 
 * {
   padding: 0;
@@ -7,7 +7,11 @@
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
 }
 
 li {
@@ -15,22 +19,20 @@ li {
 }
 
 :root {
-    --color-brand-1: #4E2096;
-    --color-brand-2: #B48CF2;
-    --color-grey-1:  #1B1C1E;
-    --color-grey-2:  #90A4AE;
-    --color-grey-3: #f1eef7;
-    --color-green-1: #33CC66;
-    --color-white:   #FFFFFF;
-  
-  
-    --title-1-logo: 1.75rem;            /*  28px  */
-    --title-1-card: 1.5rem;             /*  24px  */
-    --title-buttons: 1rem;              /*  16px  */
-    --title-buttons-card: 0.875rem;     /*  14px  */
-  
-    --text-1-card:  1rem;               /*  16px  */
-    --text-2-card:  0.5rem;             /*   8px  */
-    --text-input:  0.625rem;            /*  10px  */
-    --text-3:  0.875rem;                /*  14px  */
-  }
+  --color-brand-1: #4e2096;
+  --color-brand-2: #b48cf2;
+  --color-grey-1: #1b1c1e;
+  --color-grey-2: #90a4ae;
+  --color-green-1: #33cc66;
+  --color-white: #ffffff;
+
+  --title-1-logo: 1.75rem; /*  28px  */
+  --title-1-card: 1.5rem; /*  24px  */
+  --title-buttons: 1rem; /*  16px  */
+  --title-buttons-card: 0.875rem; /*  14px  */
+
+  --text-1-card: 1rem; /*  16px  */
+  --text-2-card: 0.5rem; /*   8px  */
+  --text-input: 0.625rem; /*  10px  */
+  --text-3: 0.875rem; /*  14px  */
+}
