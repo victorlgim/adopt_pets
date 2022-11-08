@@ -1,179 +1,213 @@
 .container-header {
-    width: 324px;
-    margin: 0 auto;
-  }
+  width: 324px;
+  margin: 0 auto;
+}
 
-  .buttons-header {
-    display: flex;
-    gap: 17px;
-  }
-  
-  .setor-btn {
-      width: 100%;
-   height: 52px;
-   font-size: 14px;
-   line-height: 4rem;
-   text-align: center;
-   color: #fff;
-   background-color: #4200FF;
-   border: none;
-   cursor: pointer;
-   outline: none;
-   appearance: none;
-   }
-   
-  
-  .buttons-dropdown {
-    display: flex;
-    gap: 15px;
-    margin-top: 15px;
-    margin-left: 20px;
-  }
-  
-  .btn-login-header {
-    width: 90px;
-    height: 27px;
-    border: none;
-    background: #ffffff;
-    border: 1px solid #4200ff;
-    font-size: 13px;
-    line-height: 21px;
-    text-align: center;
-    color: #4200ff;
-    font-weight: 600;
-  }
-  
-  .btn-register-header {
-    width: 90px;
-    height: 27px;
-    border: none;
-    background: #4200ff;
-    font-weight: 600;
-    font-size: 13px;
-    line-height: 22px;
-    text-align: center;
-    color: #ffffff;
-  }
-  
-  .btn-login-dropdown {
-    width: 140px;
-    height: 34px;
-    border: 1px solid #4200ff;
-    color: #4200ff;
-    font-weight: 700;
-    font-size: 15px;
-    background-color: #ffffff;
-  }
-  
-  .close-dropdown-x {
-    height: 16px;
-    width: 16px;
-  }
-  
-  .btn-register-dropdown {
-    width: 140px;
-    height: 34px;
-    background: #4200ff;
-    border: none;
-    font-weight: 700;
-    font-size: 15px;
-    color: #ffffff;
-  }
-  
-  .close-button-modal {
-    height: 15px;
-    width: 15px;
-  }
-  
-  .container {
-    width: 324px;
-    margin: 0 auto;
-  }
-  
-  .setor-btn {
-    width: 335px;
-    height: 40px;
-    border: none;
-    position: absolute;
-    top: 90px;
-    opacity: 0;
-    cursor: pointer;
-  }
-  
-  .buttons-header-event {
-    display: flex;
-    gap: 17px;
-    margin-top: 20px;
-    margin-bottom: 15px;
-  }
-  
-  .btn-login-header-event {
-    width: 140px;
-    height: 35px;
-    border: none;
-    background: #ffffff;
-    border: 1px solid #4200ff;
-    font-size: 13px;
-    line-height: 21px;
-    text-align: center;
-    color: #4200ff;
-    font-weight: 600;
-  }
-  
-  .btn-register-header-event {
-    width: 140px;
-    height: 35px;
-    border: none;
-    background: #4200ff;
-    font-weight: 600;
-    font-size: 13px;
-    line-height: 22px;
-    text-align: center;
-    color: #ffffff;
-  }
-  
-  .header {
-    min-height: 60px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    display: flex;
-    align-items: center;
-    background-color: #fff;
-  }
-  
-  .top-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-  }
+.buttons-header {
+  display: flex;
+  gap: 17px;
+}
 
-  .title-header {
-    display: flex;
-    gap: 8px;
-    align-items: center;
-  }
-  
-  .title-header h1 {
-    font-size: 15px;
-    color: var(--color-brand-1);
-    font-size: var( --title-1-card);
-    padding-bottom: px;
-  }
-  
-  .title-header img {
-    width: 14px;
-    height: 14px;
-  }
-  
-  .buttons-header {
-    display: none;
-    cursor: pointer;
-  }
+.setor-btn {
+  width: 100%;
+  height: 52px;
+  font-size: 14px;
+  line-height: 4rem;
+  text-align: center;
+  color: #fff;
+  background-color: #4200ff;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+}
 
-  .menu-header {
-    padding-top: 4px;
-  }
+.buttons-dropdown {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+  margin-left: 20px;
+}
 
-  .hidden {
-    display: none;
-  }
+.btn-login-header {
+  width: 90px;
+  height: 27px;
+  border: none;
+  background: #ffffff;
+  border: 1px solid #4200ff;
+  font-size: 13px;
+  line-height: 21px;
+  text-align: center;
+  color: #4200ff;
+  font-weight: 600;
+}
+
+.btn-register-header {
+  width: 90px;
+  height: 27px;
+  border: none;
+  background: #4200ff;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 22px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.btn-login-dropdown {
+  width: 140px;
+  height: 34px;
+  border: 1px solid #4200ff;
+  color: #4200ff;
+  font-weight: 700;
+  font-size: 15px;
+  background-color: #ffffff;
+}
+
+.close-dropdown-x {
+  height: 16px;
+  width: 16px;
+}
+
+.btn-register-dropdown {
+  width: 140px;
+  height: 34px;
+  background: #4200ff;
+  border: none;
+  font-weight: 700;
+  font-size: 15px;
+  color: #ffffff;
+}
+
+.close-button-modal {
+  height: 15px;
+  width: 15px;
+}
+
+.setor-btn {
+  width: 335px;
+  height: 40px;
+  border: none;
+  position: absolute;
+  top: 90px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.buttons-header-event {
+  display: flex;
+  gap: 17px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.btn-login-header-event {
+  width: 140px;
+  height: 35px;
+  border: none;
+  background: #ffffff;
+  border: 1px solid #4200ff;
+  font-size: 13px;
+  line-height: 21px;
+  text-align: center;
+  color: #4200ff;
+  font-weight: 600;
+}
+
+.btn-register-header-event {
+  width: 140px;
+  height: 35px;
+  border: none;
+  background: #4200ff;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 22px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.header {
+  min-height: 60px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+}
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-header {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.title-header h1 {
+  font-size: 15px;
+  color: var(--color-brand-1);
+  font-size: var(--title-1-card);
+  padding-bottom: px;
+}
+
+.title-header img {
+  width: 14px;
+  height: 14px;
+}
+
+.buttons-header {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-header {
+  padding-top: 4px;
+}
+
+.hidden {
+  display: none;
+}
+
+.img-card {
+  width: 100%;
+  height: 211px;
+}
+
+.container {
+  width: 270px;
+  margin: 0 auto;
+}
+
+.ul-pets {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.li-pets {
+  width: 270px;
+  height: 360px;
+  box-shadow: 0px 0px 5px rgba(78, 32, 150, 0.25);
+  border-radius: 4px;
+}
+
+.title-card {
+  font-weight: 700;
+  font-size: 27px;
+  color: var(--color-brand-1);
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.small-card {
+  font-weight: 600;
+  font-size: 10px;
+  color: #90a4ae;
+  margin-left: 11px;
+  margin-top: -2px;
+  display: block;
+}

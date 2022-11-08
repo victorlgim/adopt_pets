@@ -10,6 +10,10 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+li {
+  list-style-type: none;
+}
+
 :root {
     --color-brand-1: #4E2096;
     --color-brand-2: #B48CF2;
