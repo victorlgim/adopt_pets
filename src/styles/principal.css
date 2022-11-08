@@ -21,7 +21,7 @@ header {
 
 .button-profile{
     font-family: 'Open Sans', sans-serif;
-    font-size: var(--text-1-card);
+    font-size: var(--title-buttons);
     background-color: var(--color-white);
     color: var(--color-brand-1);
     border: 1px solid var(--color-brand-1);
@@ -34,9 +34,13 @@ header {
     cursor: pointer;
 }
 
+.button-profile:hover{
+    background-color: #F1EEF7;
+}
+
 .button-logout{
     font-family: 'Open Sans', sans-serif;
-    font-size: var(--text-1-card);
+    font-size: var(--title-buttons);
     background-color: var(--color-brand-1);
     color: var(--color-white);
     border: 1px solid var(--color-brand-1);
@@ -47,6 +51,10 @@ header {
     width: 5.563rem;
     border-radius: 1rem;
     cursor: pointer;
+}
+
+.button-logout:hover{
+    background-color: rgb(78, 32, 150,0.8);
 }
 
 .div-btn-hidden {
@@ -90,7 +98,7 @@ ul {
 }
 
 .card-animals span {
-    font-size: var(--text-1-card);
+    font-size: var(--text-3);
     color: var(--color-grey-2);
 }
 
@@ -107,7 +115,7 @@ ul {
 
 .btn-adopt {
     font-family: 'Open Sans', sans-serif;
-    font-size: var(--text-1-card);
+    font-size: var(--title-buttons-card);;
     background-color: var(--color-green-1);
     color: var(--color-white);
     border: 1px solid var(--color-green-1);
@@ -120,6 +128,10 @@ ul {
     cursor: pointer;
 }
 
+.btn-adopt:hover{
+    background-color: rgb(51, 204, 102,0.8);
+}
+
 .img-card {
     width: 100%;
     height: 10rem;
@@ -127,7 +139,7 @@ ul {
 
 footer {
     height: 3rem;
-    background-color: var(--color-grey-3);
+    background-color: #F1EEF7;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -137,7 +149,7 @@ footer > p {
     color: var(--color-brand-1);
 }
 
-@media(min-width:900px){
+@media(min-width:43.75rem){
     .button-menu {
         display: none;
     }
@@ -146,7 +158,7 @@ footer > p {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        max-width: 900px;
+        max-width: 56.25rem;
         margin: 0 auto;
         padding: 0.75rem;
     }
@@ -170,6 +182,7 @@ footer > p {
     }
 
     .list-animals {
+        justify-content: space-between;
         flex-direction: row;
         flex-wrap: wrap;
     }
