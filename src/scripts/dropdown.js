@@ -23,7 +23,8 @@ function dropdownMenu() {
       closeDropdown.classList.add("hidden");
       dropdown.classList.remove("hidden");
     });
-
   }
+
+// CHAMAR AS FUNÇÕES DE DROPDOWN NAS RESPECTIVAS PASTAS DO IMPORT
 
   export { dropdownMenu }
