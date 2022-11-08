@@ -1,0 +1,213 @@
+.container {
+  width: 67rem;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+header {
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.button {
+  font-family: "Open Sans", sans-serif;
+  cursor: pointer;
+  min-width: max-content;
+  border-radius: 1rem;
+}
+.button-header {
+  padding: 0.25rem 1.5rem;
+  font-weight: 600;
+  font-size: var(--title-buttons);
+}
+.button-user {
+  padding: 0.25rem 1rem;
+  font-weight: 600;
+  font-size: var(--title-buttons-card);
+}
+
+.button-border-brand {
+  background: var(--color-white);
+  border: 1px solid var(--color-brand-1);
+  color: var(--color-brand-1);
+}
+.button-border-red {
+  background: var(--color-white);
+  border: 1px solid var(--color-red);
+  color: var(--color-red);
+}
+
+.button-brand {
+  background: var(--color-brand-1);
+  border: 1px solid var(--color-brand-1);
+  color: var(--color-white);
+}
+
+.button-green {
+  background: var(--color-green-1);
+  border: 1px solid var(--color-green-1);
+  color: var(--color-white);
+  margin-bottom: 1rem;
+}
+.button-green-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.button-dropdown {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.desk-buttons {
+  display: none;
+}
+
+.box-brand {
+  background-color: var(--color-brand-1);
+  height: 13.938rem;
+}
+.user-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.625rem;
+}
+.user-img {
+  margin-top: -11.375rem;
+  max-width: 100%;
+  width: 20rem;
+  border-radius: 50%;
+  border: 0.313rem solid var(--color-white);
+  object-fit: cover;
+}
+.user-informations {
+  width: 30rem;
+  max-width: 100%;
+  padding: 1.5rem;
+  box-shadow: 0px 0px 5px rgba(78, 32, 150, 0.25);
+  border-radius: 0.25rem;
+  margin-bottom: 6rem;
+}
+.user-informations h2 {
+  font-weight: 700;
+  font-size: var(--size-title-1-card);
+  margin-bottom: 1.25rem;
+  text-align: center;
+  color: var(--color-brand-1);
+}
+.user-informations > .user-informations-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 3.188rem;
+}
+.user-informations > .user-informations-text p {
+  font-weight: 600;
+  font-size: var(--size-title-buttons);
+}
+.user-informations > .user-informations-text .color-brand-1 {
+  color: var(--color-brand-1);
+}
+.user-informations > .user-informations-text .color-black {
+  color: #000000;
+}
+.user-informations .user-informations-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.938rem;
+}
+
+.section-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+  margin-bottom: 6rem;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  height: max-content;
+  box-shadow: 0px 0px 5px rgba(78, 32, 150, 0.25);
+  border-radius: 0.25rem;
+}
+.card img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0.25rem 0.25rem 0px 0px;
+}
+.card p,
+span {
+  font-weight: 600;
+  font-size: var(--size-title-buttons-card);
+}
+.color-brand-1 {
+  color: var(--color-brand-1);
+}
+.color-black {
+  color: #000000;
+}
+.card > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 2.625rem 1.938rem;
+}
+.card > div button {
+  margin-top: 0.5rem;
+}
+footer {
+  background-color: #f1eef7;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer > p {
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: var(--color-brand-1);
+}
+.button-list {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 67rem) {
+  .button-green-container {
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 31.875rem) {
+  .user-informations .user-informations-buttons {
+    flex-direction: row;
+  }
+  .desk-buttons {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .button-dropdown {
+    display: none;
+  }
+  .card {
+    width: 30rem;
+    height: 12.5rem;
+    flex-direction: row;
+  }
+  .card img {
+    width: 14rem;
+  }
+}
