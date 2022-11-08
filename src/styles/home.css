@@ -42,6 +42,11 @@
   border-radius: 16px;
   color: var(--color-brand-1);
   font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-login-header:hover{
+  background-color: #F1EEF7;
 }
 
 .btn-register-header {
@@ -55,6 +60,11 @@
   line-height: 22px;
   text-align: center;
   color: #ffffff;
+  cursor: pointer;
+}
+
+.btn-register-header:hover{
+  background-color: rgb(78, 32, 150,0.8);
 }
 
 .btn-login-dropdown {
@@ -65,6 +75,11 @@
   font-weight: 700;
   font-size: 15px;
   background-color: #ffffff;
+  cursor: pointer;
+}
+
+.btn-login-dropdown:hover {
+  background-color: #F1EEF7;
 }
 
 .close-dropdown-x {
@@ -80,6 +95,11 @@
   font-weight: 700;
   font-size: 15px;
   color: #ffffff;
+  cursor: pointer;
+}
+
+.btn-register-dropdown:hover {
+  background-color: rgb(78, 32, 150,0.8);
 }
 
 .close-button-modal {
