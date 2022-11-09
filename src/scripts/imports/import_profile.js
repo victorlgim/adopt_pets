@@ -1,11 +1,19 @@
-
 // CHAMAR AS FUNÇÕES DE DROPDOWN NAS RESPECTIVAS PASTAS DO IMPORT
 
-
-import { initPerfil, initUserPets, logoutEvent, renderUserInformations, renderUserPets } from '../profile/profile.js'
-
+import {
+  initPerfil,
+  initUserPets,
+  logoutEvent,
+  renderUserInformations,
+  renderUserPets,
+  updateUserInformationsEvent,
+  deleteUserEvent,
+  registerPetEvent,
+} from "../profile/profile.js"
 
 logoutEvent()
 renderUserInformations(initPerfil)
 renderUserPets(initUserPets)
-
+updateUserInformationsEvent()
+deleteUserEvent()
+registerPetEvent()

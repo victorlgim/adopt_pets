@@ -47,5 +47,37 @@
 }
 
 .modal-container-content {
-  padding: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.modal-container-content p {
+  width: 15rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-brand-1);
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+.modal-container-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.modal-container-content input {
+  border: 1px solid #b48cf2;
+  border-radius: 1rem;
+  height: 1.688rem;
+  outline: none;
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--color-brand-2);
+  padding: 0 10px;
+}
+.modal-container-content input::placeholder {
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--color-brand-2);
 }
