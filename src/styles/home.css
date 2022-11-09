@@ -191,6 +191,14 @@
       min-width: max-content;
       height: 32px;
   }
+
+  .btn-login-header:hover {
+    background-color: #F1EEF7;
+  }
+
+  .btn-register-header:hover {
+    background-color: rgb(78, 32, 150,0.8);
+  }
   
   .btn-register-header {
     width: 90px;
@@ -218,7 +226,15 @@
     font-size: 15px;
     background-color: #ffffff;
   }
+
+  .btn-login-modal:hover {
+    background-color: rgba(68, 21, 143, 0.89);
+  }
   
+.btn-login-modal-a:hover {
+    background-color: rgba(68, 21, 143, 0.89);
+}
+
   .close-dropdown-x {
     height: 16px;
     width: 16px;
@@ -322,12 +338,20 @@
   
   .img-card {
     width: 100%;
-    height: 211px;
+    height: 22px;
   }
   
   .container {
     width: 270px;
     margin: 0 auto;
+  }
+
+  .title-card {
+    font-size: 27px;
+  }
+
+  .img-card {
+    height: 180px;
   }
   
   .ul-pets {
@@ -340,14 +364,13 @@
   
   .li-pets {
     width: 270px;
-    height: 360px;
+    height: 300px;
     box-shadow: 0px 0px 5px rgba(78, 32, 150, 0.25);
     border-radius: 4px;
   }
   
   .title-card {
     font-weight: 700;
-    font-size: 27px;
     color: var(--color-brand-1);
     margin-top: 10px;
     margin-left: 10px;
@@ -355,7 +378,7 @@
   
   .small-card {
     font-weight: 600;
-    font-size: 10px;
+    font-size: 13px;
     color: #90a4ae;
     margin-left: 11px;
     margin-top: -2px;
@@ -487,13 +510,7 @@
       height: 100%;
     }
   
-    .title-card {
-      font-size: 21px;
-    }
-  
-    .img-card {
-      height: 160px;
-    }
+   
   
   
     .modal {
@@ -926,6 +943,43 @@
       display: none;
     }
   
+    .img-card {
+        height: 180px;
+    }
+
+    .ul-pets {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 50px;
+        margin-bottom: 60px;
+      }
+      
+      .li-pets {
+        width: 260px;
+        height: 300px;
+        box-shadow: 0px 0px 5px rgba(78, 32, 150, 0.25);
+        border-radius: 4px;
+      }
+
+      .title-card {
+        font-weight: 700;
+        font-size: 25px;
+        color: var(--color-brand-1);
+        margin-top: 10px;
+        margin-left: 10px;
+      }
+      
+      .small-card {
+        font-weight: 600;
+        font-size: 14px;
+        color: #90a4ae;
+        margin-left: 11px;
+        margin-top: -2px;
+        display: block;
+      }
+
     
   }
   
@@ -1170,6 +1224,47 @@
     .menu-header {
       display: none;
     }
+
+    .container {
+        width: 900px;
+    }
+
+    .img-card {
+        height: 200px;
+    }
+
+    .ul-pets {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 50px;
+        margin-bottom: 60px;
+      }
+      
+      .li-pets {
+        width: 260px;
+        height: 320px;
+        box-shadow: 0px 0px 5px rgba(78, 32, 150, 0.25);
+        border-radius: 4px;
+      }
+
+      .title-card {
+        font-weight: 700;
+        font-size: 23px;
+        color: var(--color-brand-1);
+        margin-top: 10px;
+        margin-left: 10px;
+      }
+      
+      .small-card {
+        font-weight: 600;
+        font-size: 13px;
+        color: #90a4ae;
+        margin-left: 11px;
+        margin-top: -2px;
+        display: block;
+      }
   }
   
   @keyframes transition {
