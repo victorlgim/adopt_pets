@@ -1,6 +1,4 @@
 
-buttonLogout.addEventListener("click", ()=>{
-    setTimeout(()=>{
-        window.location.assign(`${window.location.origin}/index.html`)
-    },1000)
-})
+import { switchButtons } from '../dropdown.js'
+
+switchButtons()
