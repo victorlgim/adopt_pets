@@ -128,7 +128,7 @@ ul {
 }
 
 .card-animals h2 {
-    font-size: var(--title-1-card);
+    font-size: var(--title-2-card);
     color: var(--color-brand-1);
 }
 

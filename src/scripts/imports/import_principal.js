@@ -1,9 +1,10 @@
-import{getPetsAdopt} from '../requests.js'
+import{getReadAllAdoptions} from '../requests.js'
 import { switchButtons } from '../dropdown.js'
-import { logoutPrincipal,renderCardsPrincipal } from '../principal/principal.js'
-console.log( await getPetsAdopt())
+import { logoutPrincipal,renderCardsPrincipal} from '../principal/principal.js'
+
 switchButtons()
 logoutPrincipal()
+renderCardsPrincipal(await getReadAllAdoptions())
 
 
 
