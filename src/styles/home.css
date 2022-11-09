@@ -990,6 +990,79 @@ footer > p {
 }
 
 @media (min-width: 1080px) {
+  .modal-container-verify {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .modal-verify {
+    background: #fcfeff;
+    box-shadow: 0px 4px 30px -12px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    width: 500px;
+    height: 130px;
+    position: absolute;
+    box-shadow: 1px 3px 15px 0px rgba(0, 0, 0, 0.51);
+    right: 30px;
+    animation: smooth 4000ms ease-in forwards;
+    bottom: 20px;
+  }
+
+  .modal-header {
+    display: flex;
+    margin-top: 20px;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+
+  .modal-header h3 {
+    color: #087f5b;
+    font-size: 16px;
+  }
+
+  .modal-verify p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #343a40;
+    margin-top: 15px;
+    text-align: start;
+    
+  }
+
+  .image-modal {
+    background-color: #087f5b;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    text-align: center;
+  }
+
+  .image-modal img {
+    height: 11px;
+    width: 14px;
+  }
+
+  .acess-login {
+    display: inline;
+    margin-left: 10px;
+  }
+
+  .container-modal-verify {
+    width: 440px;
+    margin: 0 auto;
+  }
+
+  .hidden {
+    display: none;
+  }
+
   .container {
     width: 760px;
   }
@@ -1300,3 +1373,38 @@ footer > p {
     opacity: 1;
   }
 }
+
+@keyframes smooth {
+    0% {
+      right: -500px;
+      bottom: 20px;
+    }
+    10% {
+      right: 20px;
+      bottom: 20px;
+    }
+    50% {
+      right: 20px;
+      bottom: 20px;
+    }
+    60% {
+      right: 20px;
+      bottom: 20px;
+    }
+    70% {
+      right: 20px;
+      bottom: 20px;
+    }
+    80% {
+      right: 50px;
+      bottom: 20px;
+    }
+    90% {
+      right: -500px;
+      bottom: 20px;
+    }
+    100% {
+      right: -500px;
+      bottom: 20px;
+    }
+  }

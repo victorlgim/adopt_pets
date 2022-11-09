@@ -1,5 +1,5 @@
 import { renderError } from "./homepage/login.js";
-import { renderErrorEmail, verifyStatusOkRegister, resetFormRegister } from "./homepage/register.js";
+import { renderErrorEmail, verifyStatusOkRegister, resetFormRegister, toastVerifyRegister } from "./homepage/register.js";
 
 async function register(body) {
   try {
@@ -14,17 +14,20 @@ async function register(body) {
     button.innerHTML = `<img src='./src/assets/spinner.png' class='spinner-img'>`;
     if (request.ok) {
       setTimeout(() => {
+        toastVerifyRegister();
+      }, 3000);
+      setTimeout(() => {
         verifyStatusOkRegister();
         resetFormRegister();
         button.innerHTML = "Cadastrar";
-      }, 2000);
+      }, 5000);
       const data = await request.json();
       return data;
     } else {
       setTimeout(() => {
         renderErrorEmail();
         button.innerHTML = "Cadastrar";
-      }, 2000);
+      }, 3000);
     }
   } catch (err) {
     console.log(err);

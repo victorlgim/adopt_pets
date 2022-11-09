@@ -54,4 +54,12 @@ function verifyStatusOkRegister() {
     modalLogin.classList.remove('hidden')
 }
 
-export { registerUsers, renderErrorEmail, cleanInputEmail, verifyStatusOkRegister, resetFormRegister };
+function toastVerifyRegister() {
+    const modal = document.querySelector('.modal-container-verify')
+    modal.classList.remove('hidden')
+    setTimeout(() => {
+       modal.classList.add('hidden')
+    }, 4000)
+}
+
+export { registerUsers, renderErrorEmail, cleanInputEmail, verifyStatusOkRegister, resetFormRegister, toastVerifyRegister };
