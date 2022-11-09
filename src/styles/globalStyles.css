@@ -18,6 +18,10 @@ li {
   list-style-type: none;
 }
 
+button {
+  cursor: pointer;
+}
+
 :root {
   --color-brand-1: #4e2096;
   --color-brand-2: #b48cf2;

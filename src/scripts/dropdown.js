@@ -7,7 +7,6 @@ function dropdownMenu() {
     const closeDropdown = document.querySelector(".modal-close-x");
   
     dropdown.addEventListener("click", () => {
-        console.log('aa')
       header.style.height = "110px";
       btnDropdown.classList.remove("hidden");
       btnDropdown.style.margin = '10px 0px 0px 0px'
