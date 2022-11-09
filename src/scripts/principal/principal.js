@@ -45,4 +45,4 @@ function logoutPrincipal () {
     })
 }
 
-export { logoutPrincipal,renderCardsPrincipal,observer }
+export { logoutPrincipal,renderCardsPrincipal }
