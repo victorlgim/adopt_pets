@@ -153,11 +153,6 @@
   border-radius: 16px;
   color: var(--color-brand-1);
   font-weight: 600;
-  padding: 0.25rem 1.5rem;
-    font-weight: 600;
-    font-size: var(--title-buttons);
-    min-width: max-content;
-    height: 32px;
 }
 
 .btn-register-header {
@@ -171,10 +166,6 @@
   line-height: 22px;
   text-align: center;
   color: #ffffff;
-  padding: 0.25rem 1.5rem;
-    font-weight: 600;
-    font-size: var(--title-buttons);
-    min-width: max-content;
 }
 
 .btn-login-dropdown {
@@ -185,6 +176,11 @@
   font-weight: 700;
   font-size: 15px;
   background-color: #ffffff;
+  cursor: pointer;
+}
+
+.btn-login-dropdown:hover {
+  background-color: #F1EEF7;
 }
 
 .close-dropdown-x {
@@ -200,6 +196,11 @@
   font-weight: 700;
   font-size: 15px;
   color: #ffffff;
+  cursor: pointer;
+}
+
+.btn-register-dropdown:hover {
+  background-color: rgb(78, 32, 150,0.8);
 }
 
 .close-button-modal {

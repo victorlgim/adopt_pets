@@ -1,5 +1,23 @@
 // CHAMAR AS FUNÇÕES DE DROPDOWN NAS RESPECTIVAS PASTAS DO IMPORT
 
+function switchButtons(){
+  const btnMenu = document.querySelector('#menu')
+  const btnX = document.querySelector('#closeMenu')
+  const divButtons = document.querySelector('.div-btn-hidden')
+
+  btnMenu.addEventListener('click',() => {
+      btnMenu.classList.add('hidden')
+      btnX.classList.remove('hidden')
+      divButtons.classList.remove('hidden')
+  })
+
+  btnX.addEventListener('click',() => {
+      btnMenu.classList.remove('hidden')
+      btnX.classList.add('hidden')
+      divButtons.classList.add('hidden')
+  })
+}
+
 function dropdownMenu() {
     const dropdown = document.querySelector(".menu-three");
     const header = document.querySelector(".header");
@@ -24,4 +42,4 @@ function dropdownMenu() {
 
 // CHAMAR AS FUNÇÕES DE DROPDOWN NAS RESPECTIVAS PASTAS DO IMPORT
 
-  export { dropdownMenu }
+  export { dropdownMenu, switchButtons }
