@@ -10,13 +10,21 @@ async function register(body) {
       },
       body: JSON.stringify(body),
     });
+    const button = document.querySelector(".btn-login-modal-a");
+    button.innerHTML = `<img src='./src/assets/spinner.png' class='spinner-img'>`;
     if (request.ok) {
-      verifyStatusOkRegister();
-      resetFormRegister() 
+      setTimeout(() => {
+        verifyStatusOkRegister();
+        resetFormRegister();
+        button.innerHTML = "Cadastrar";
+      }, 2000);
       const data = await request.json();
-      return data
+      return data;
     } else {
-      renderErrorEmail();
+      setTimeout(() => {
+        renderErrorEmail();
+        button.innerHTML = "Cadastrar";
+      }, 2000);
     }
   } catch (err) {
     console.log(err);
@@ -35,14 +43,21 @@ async function login(body) {
         body: JSON.stringify(body),
       }
     );
+    const button = document.querySelector(".btn-login-modal");
+    button.innerHTML = `<img src='./src/assets/spinner.png' class='spinner-img'>`;
 
     if (request.ok) {
       const response = await request.json();
       localStorage.setItem("token", response.token);
-      localStorage.setItem('user', response.user)
-      window.location.replace('./src/pages/profile.html')
+      localStorage.setItem("user", response.user);
+      setTimeout(() => {
+        window.location.replace("./src/pages/profile.html");
+      }, 2000);
     } else {
-      renderError();
+      setTimeout(() => {
+        renderError();
+        button.innerHTML = "Entrar";
+      }, 2000);
     }
   } catch (err) {
     console.log(err);

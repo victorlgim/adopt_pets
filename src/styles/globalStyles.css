@@ -8,6 +8,7 @@
 
 body {
   font-family: "Open Sans", sans-serif;
+  animation: smoothShow 800ms;
 }
 
 a {
@@ -16,6 +17,7 @@ a {
 
 li {
   list-style-type: none;
+  animation: smoothShow 800ms;
 }
 
 button {
@@ -39,4 +41,13 @@ button {
   --text-2-card: 0.5rem; /*   8px  */
   --text-input: 0.625rem; /*  10px  */
   --text-3: 0.875rem; /*  14px  */
+}
+
+@keyframes smoothShow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

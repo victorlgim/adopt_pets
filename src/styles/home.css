@@ -1,44 +1,530 @@
 .container-header {
-    width: 324px;
+  width: 324px;
+  margin: 0 auto;
+}
+
+.buttons-header {
+  display: flex;
+  gap: 17px;
+}
+
+.spinner-img {
+  animation: loading 1s infinite;
+}
+
+.title-card {
+  font-size: 21px;
+}
+
+footer {
+  background-color: #f1eef7;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer > p {
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: var(--color-brand-1);
+}
+
+.img-card {
+  height: 160px;
+}
+
+.msg-error {
+  display: block;
+  color: #c73650;
+  font-weight: 400;
+  font-size: 13px;
+  padding-left: 4px;
+  padding-bottom: 20px;
+}
+
+.msg-error-email {
+  display: block;
+  color: #c73650;
+  font-weight: 400;
+  font-size: 13px;
+  padding-left: 4px;
+  padding-bottom: 20px;
+  margin-top: -15px;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal {
+  position: relative;
+  width: 350px;
+  height: 402px;
+  border-radius: var(--border-radius-1);
+  box-shadow: 2px 5px 15px 5px rgba(0, 0, 0, 0.31);
+  animation: transition 1.4s ease;
+  background: #ffffff;
+  box-shadow: 0px 0px 5px rgba(78, 32, 150, 0.25);
+  border-radius: 16px;
+}
+
+.modal-container {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.container-modal {
+  width: 290px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.top-modal {
+  height: 42px;
+  background: #4e2096;
+  border-radius: 16px 16px 0px 0px;
+}
+
+.flex-end-modal {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.flex-end-modal img {
+  padding-right: 10px;
+  padding-top: 8px;
+  cursor: pointer;
+}
+
+.form-login {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-modal {
+  font-size: 24px;
+  color: #4e2096;
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+
+.email-login-modal {
+  height: 37px;
+  outline: none;
+  background: #ffffff;
+  border: 1px solid #b48cf2;
+  border-radius: 16px;
+  padding-left: 15px;
+  margin-bottom: 20px;
+}
+
+.password-login-modal {
+  height: 37px;
+  outline: none;
+  background: #ffffff;
+  border: 1px solid #b48cf2;
+  border-radius: 16px;
+  padding-left: 15px;
+  margin-bottom: 30px;
+}
+
+.btn-login-modal {
+  height: 36px;
+  background: #4e2096;
+  border-radius: 16px;
+  border: none;
+  color: #ffffff;
+}
+
+.flex-bottom-modal-login {
+  display: flex;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.msg-bottom-modal {
+  font-weight: 400;
+  font-size: 12px;
+  color: #1b1c1e;
+  display: block;
+}
+
+.ancora-modal-login {
+  font-size: 12px;
+  border: none;
+  background-color: #fff;
+  color: #4e2096;
+}
+
+.ancora-modal-login:hover {
+  text-decoration: underline;
+}
+
+.setor-btn {
+  width: 100%;
+  height: 52px;
+  font-size: 14px;
+  line-height: 4rem;
+  text-align: center;
+  color: #fff;
+  background-color: #4200ff;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+}
+
+.buttons-dropdown {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  margin-left: 40px;
+  justify-content: center;
+}
+
+.btn-login-header {
+  width: 90px;
+  height: 27px;
+  border: none;
+  background: #ffffff;
+  border: 1px solid var(--color-brand-1);
+  font-size: 13px;
+  line-height: 21px;
+  text-align: center;
+  border-radius: 16px;
+  color: var(--color-brand-1);
+  font-weight: 600;
+  padding: 0.25rem 1.5rem;
+  font-weight: 600;
+  font-size: var(--title-buttons);
+  min-width: max-content;
+  height: 32px;
+}
+
+.btn-login-header:hover {
+  background-color: #f1eef7;
+}
+
+.btn-register-header:hover {
+  background-color: rgb(78, 32, 150, 0.8);
+}
+
+.btn-register-header {
+  width: 90px;
+  height: 32px;
+  border-radius: 16px;
+  border: none;
+  background: var(--color-brand-1);
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 22px;
+  text-align: center;
+  color: #ffffff;
+  padding: 0.25rem 1.5rem;
+  font-weight: 600;
+  font-size: var(--title-buttons);
+  min-width: max-content;
+}
+
+.btn-login-dropdown {
+  width: 140px;
+  height: 34px;
+  border: 1px solid #4e2096;
+  color: #4e2096;
+  font-weight: 700;
+  font-size: 15px;
+  background-color: #ffffff;
+}
+
+.btn-login-modal:hover {
+  background-color: rgba(68, 21, 143, 0.89);
+}
+
+.btn-login-modal-a:hover {
+  background-color: rgba(68, 21, 143, 0.89);
+}
+
+.close-dropdown-x {
+  height: 16px;
+  width: 16px;
+}
+
+.btn-register-dropdown {
+  width: 140px;
+  height: 34px;
+  background: #4e2096;
+  border: none;
+  font-weight: 700;
+  font-size: 15px;
+  color: #ffffff;
+}
+
+.close-button-modal {
+  height: 15px;
+  width: 15px;
+}
+
+.setor-btn {
+  width: 335px;
+  height: 40px;
+  border: none;
+  position: absolute;
+  top: 90px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.buttons-header-event {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.btn-login-header-event {
+  width: 140px;
+  height: 35px;
+  border: none;
+  background: #ffffff;
+  border: 1px solid var(--color-brand-1);
+  padding: 0.25rem 1.5rem;
+
+  text-align: center;
+  color: var(--color-brand-1);
+  font-weight: 600;
+}
+
+.btn-register-header-event {
+  width: 140px;
+  height: 35px;
+  border: none;
+  background: var(--color-brand-1);
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 22px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.header {
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-header {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.title-header h1 {
+  color: var(--color-brand-1);
+  font-size: 28px;
+}
+
+.title-header img {
+  width: 14px;
+  height: 14px;
+}
+
+.buttons-header {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-header {
+  padding-top: 4px;
+}
+
+.img-card {
+  width: 100%;
+  height: 22px;
+}
+
+.container {
+  width: 270px;
+  margin: 0 auto;
+}
+
+.title-card {
+  font-size: 27px;
+}
+
+.img-card {
+  height: 180px;
+}
+
+.ul-pets {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-bottom: 60px;
+}
+
+.li-pets {
+  width: 270px;
+  height: 300px;
+  box-shadow: 0px 0px 5px rgba(78, 32, 150, 0.25);
+  border-radius: 4px;
+}
+
+.title-card {
+  font-weight: 700;
+  color: var(--color-brand-1);
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.small-card {
+  font-weight: 600;
+  font-size: 13px;
+  color: #90a4ae;
+  margin-left: 11px;
+  margin-top: -2px;
+  display: block;
+}
+
+.modal-a {
+  position: relative;
+  width: 350px;
+  height: 402px;
+  border-radius: var(--border-radius-1);
+  box-shadow: 2px 5px 15px 5px rgba(0, 0, 0, 0.31);
+  animation: transition 1.4s ease;
+  background: #ffffff;
+  box-shadow: 0px 0px 5px rgba(78, 32, 150, 0.25);
+  border-radius: 16px;
+  top: 20px;
+}
+
+.modal-container-a {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.container-modal-a {
+  width: 290px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.top-modal-a {
+  height: 42px;
+  background: #4e2096;
+  border-radius: 16px 16px 0px 0px;
+}
+
+.flex-end-modal-a {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.flex-end-modal-a img {
+  padding-right: 10px;
+  padding-top: 8px;
+  cursor: pointer;
+}
+
+.form-login-a {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-modal-a {
+  font-size: 24px;
+  color: #4e2096;
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+
+.email-login-modal-a {
+  height: 37px;
+  outline: none;
+  background: #ffffff;
+  border: 1px solid #b48cf2;
+  border-radius: 16px;
+  padding-left: 15px;
+  margin-bottom: 20px;
+}
+
+.password-login-modal-a {
+  height: 37px;
+  outline: none;
+  background: #ffffff;
+  border: 1px solid #b48cf2;
+  border-radius: 16px;
+  padding-left: 15px;
+  margin-bottom: 20px;
+}
+
+.btn-login-modal-a {
+  height: 36px;
+  background: #4e2096;
+  border-radius: 16px;
+  border: none;
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+.flex-bottom-modal-login-a {
+  display: flex;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.msg-bottom-modal-a {
+  font-weight: 400;
+  font-size: 12px;
+  color: #1b1c1e;
+  display: block;
+}
+
+.ancora-modal-login-a {
+  font-size: 12px;
+  border: none;
+  background-color: #fff;
+  color: #4e2096;
+}
+
+.ancora-modal-login-a:hover {
+  text-decoration: underline;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (min-width: 375px) {
+  .container-modal {
+    width: 430px;
     margin: 0 auto;
-  }
-  
-  .buttons-header {
-    display: flex;
-    gap: 17px;
-  }
-  
-  .title-card {
-    font-size: 21px;
-  }
-  
-  .img-card {
-    height: 160px;
+    height: 100%;
   }
 
-  .msg-error {
-    display: block;
-    color: #c73650;
-    font-weight: 400;
-    font-size: 13px;
-    padding-left: 4px;
-    padding-bottom: 20px;
-  }
-
-  .msg-error-email {
-    display: block;
-    color: #c73650;
-    font-weight: 400;
-    font-size: 13px;
-    padding-left: 4px;
-    padding-bottom: 20px;
-    margin-top: -15px;
-  }
-
-  .hidden {
-    display: none;
-  }
-  
   .modal {
     position: relative;
     width: 350px;
@@ -49,46 +535,38 @@
     background: #ffffff;
     box-shadow: 0px 0px 5px rgba(78, 32, 150, 0.25);
     border-radius: 16px;
+    top: 30px;
   }
-  
-  .modal-container {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    justify-content: center;
-    display: flex;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-  
+
   .container-modal {
     width: 290px;
     margin: 0 auto;
     height: 100%;
   }
-  
+
   .top-modal {
     height: 42px;
     background: #4e2096;
     border-radius: 16px 16px 0px 0px;
   }
-  
+
   .flex-end-modal {
     display: flex;
     justify-content: end;
     align-items: center;
   }
-  
+
   .flex-end-modal img {
     padding-right: 10px;
     padding-top: 8px;
     cursor: pointer;
   }
-  
+
   .form-login {
     display: flex;
     flex-direction: column;
   }
-  
+
   .login-modal {
     font-size: 24px;
     color: #4e2096;
@@ -96,7 +574,7 @@
     margin-top: 60px;
     margin-bottom: 30px;
   }
-  
+
   .email-login-modal {
     height: 37px;
     outline: none;
@@ -106,7 +584,7 @@
     padding-left: 15px;
     margin-bottom: 20px;
   }
-  
+
   .password-login-modal {
     height: 37px;
     outline: none;
@@ -116,7 +594,7 @@
     padding-left: 15px;
     margin-bottom: 30px;
   }
-  
+
   .btn-login-modal {
     height: 36px;
     background: #4e2096;
@@ -124,258 +602,665 @@
     border: none;
     color: #ffffff;
   }
-  
+
   .flex-bottom-modal-login {
     display: flex;
     gap: 6px;
     margin-top: 10px;
   }
-  
+
   .msg-bottom-modal {
     font-weight: 400;
     font-size: 12px;
     color: #1b1c1e;
     display: block;
   }
-  
 
-
-  .ancora-modal-login{
+  .ancora-modal-login {
     font-size: 12px;
-    border: none;
-    background-color: #fff;
-    color: #4e2096;
   }
 
-  .ancora-modal-login:hover {
-      text-decoration: underline;
-  }
-  
-  .setor-btn {
-    width: 100%;
-    height: 52px;
-    font-size: 14px;
-    line-height: 4rem;
-    text-align: center;
-    color: #fff;
-    background-color: #4200ff;
-    border: none;
-    cursor: pointer;
-    outline: none;
-    appearance: none;
-  }
-  
-  .buttons-dropdown {
-    display: flex;
-    gap: 15px;
-    margin-top: 20px;
-    margin-left: 40px;
-    justify-content: center;
-  }
-  
-  .btn-login-header {
-    width: 90px;
-    height: 27px;
-    border: none;
+  .modal-a {
+    position: relative;
+    width: 350px;
+    height: 510px;
+    border-radius: var(--border-radius-1);
+    box-shadow: 2px 5px 15px 5px rgba(0, 0, 0, 0.31);
+    animation: transition 1.4s ease;
     background: #ffffff;
-    border: 1px solid var(--color-brand-1);
-    font-size: 13px;
-    line-height: 21px;
-    text-align: center;
+    box-shadow: 0px 0px 5px rgba(78, 32, 150, 0.25);
     border-radius: 16px;
-    color: var(--color-brand-1);
-    font-weight: 600;
-    padding: 0.25rem 1.5rem;
-      font-weight: 600;
-      font-size: var(--title-buttons);
-      min-width: max-content;
-      height: 32px;
   }
 
-  .btn-login-header:hover {
-    background-color: #F1EEF7;
+  .container-modal-a {
+    width: 300px;
+    margin: 0 auto;
+    height: 100%;
   }
 
-  .btn-register-header:hover {
-    background-color: rgb(78, 32, 150,0.8);
+  .top-modal-a {
+    height: 42px;
+    background: #4e2096;
+    border-radius: 16px 16px 0px 0px;
   }
-  
-  .btn-register-header {
-    width: 90px;
-    height: 32px;
+
+  .flex-end-modal-a {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+
+  .flex-end-modal-a img {
+    padding-right: 10px;
+    padding-top: 8px;
+    cursor: pointer;
+  }
+
+  .form-login-a {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .login-modal-a {
+    font-size: 24px;
+    color: #4e2096;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+
+  .email-login-modal-a {
+    height: 42px;
+    outline: none;
+    background: #ffffff;
+    border: 1px solid #b48cf2;
+    border-radius: 16px;
+    padding-left: 15px;
+    margin-bottom: 20px;
+  }
+
+  .password-login-modal-a {
+    height: 42px;
+    outline: none;
+    background: #ffffff;
+    border: 1px solid #b48cf2;
+    border-radius: 16px;
+    padding-left: 15px;
+    margin-bottom: 20px;
+  }
+
+  .btn-login-modal-a {
+    height: 40px;
+    background: #4e2096;
     border-radius: 16px;
     border: none;
-    background: var(--color-brand-1);
-    font-weight: 600;
-    font-size: 13px;
-    line-height: 22px;
-    text-align: center;
     color: #ffffff;
-    padding: 0.25rem 1.5rem;
-      font-weight: 600;
-      font-size: var(--title-buttons);
-      min-width: max-content;
-  }
-  
-  .btn-login-dropdown {
-    width: 140px;
-    height: 34px;
-    border: 1px solid #4e2096;
-    color: #4e2096;
-    font-weight: 700;
-    font-size: 15px;
-    background-color: #ffffff;
+    margin-top: 10px;
   }
 
-  .btn-login-modal:hover {
-    background-color: rgba(68, 21, 143, 0.89);
+  .flex-bottom-modal-login-a {
+    display: flex;
+    gap: 6px;
+    margin-top: 10px;
   }
-  
-.btn-login-modal-a:hover {
-    background-color: rgba(68, 21, 143, 0.89);
+
+  .msg-bottom-modal-a {
+    font-weight: 400;
+    font-size: 12px;
+    color: #1b1c1e;
+    display: block;
+  }
+
+  .ancora-modal-login-a {
+    font-size: 12px;
+  }
+
+  .hidden {
+    display: none;
+  }
 }
 
-  .close-dropdown-x {
-    height: 16px;
-    width: 16px;
-  }
-  
-  .btn-register-dropdown {
-    width: 140px;
-    height: 34px;
-    background: #4e2096;
-    border: none;
-    font-weight: 700;
-    font-size: 15px;
-    color: #ffffff;
-  }
-  
-  .close-button-modal {
-    height: 15px;
-    width: 15px;
-  }
-  
-  .setor-btn {
-    width: 335px;
-    height: 40px;
-    border: none;
-    position: absolute;
-    top: 90px;
-    opacity: 0;
-    cursor: pointer;
-  }
-  
-  .buttons-header-event {
-    display: flex;
-    gap: 1.5rem;
-    margin-top: 20px;
-    margin-bottom: 15px;
-  }
-  
-  .btn-login-header-event {
-    width: 140px;
-    height: 35px;
-    border: none;
-    background: #ffffff;
-    border: 1px solid var(--color-brand-1);
-    padding: 0.25rem 1.5rem;
-  
-    text-align: center;
-    color: var(--color-brand-1);
-    font-weight: 600;
-  }
-  
-  .btn-register-header-event {
-    width: 140px;
-    height: 35px;
-    border: none;
-    background: var(--color-brand-1);
-    font-weight: 600;
-    font-size: 13px;
-    line-height: 22px;
-    text-align: center;
-    color: #ffffff;
-  }
-  
-  .header {
-      height: 5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border: 1px solid rgba(0, 0, 0, 0.2);
-  }
-  
-  .top-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .title-header {
-    display: flex;
-    gap: 8px;
-    align-items: center;
-  }
-  
-  .title-header h1 {
-    color: var(--color-brand-1);
-    font-size: 28px;
-  }
-  
-  .title-header img {
-    width: 14px;
-    height: 14px;
-  }
-  
-  .buttons-header {
-    display: none;
-    cursor: pointer;
-  }
-  
-  .menu-header {
-    padding-top: 4px;
-  }
-  
-  .img-card {
-    width: 100%;
-    height: 22px;
-  }
-  
+@media (min-width: 768px) {
   .container {
-    width: 270px;
+    width: 600px;
+  }
+
+  .ul-pets {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .container-header {
+    width: 600px;
+  }
+
+  .container-modal {
+    width: 430px;
     margin: 0 auto;
+    height: 100%;
   }
 
   .title-card {
-    font-size: 27px;
+    font-size: 21px;
+  }
+
+  .img-card {
+    height: 160px;
+  }
+
+  .modal {
+    position: relative;
+    width: 500px;
+    height: 402px;
+    border-radius: var(--border-radius-1);
+    box-shadow: 2px 5px 15px 5px rgba(0, 0, 0, 0.31);
+    animation: transition 1.4s ease;
+    background: #ffffff;
+    box-shadow: 0px 0px 5px rgba(78, 32, 150, 0.25);
+    border-radius: 16px;
+    top: 40px;
+  }
+
+  .container-modal {
+    width: 360px;
+    margin: 0 auto;
+    height: 100%;
+  }
+
+  .top-modal {
+    height: 42px;
+    background: #4e2096;
+    border-radius: 16px 16px 0px 0px;
+  }
+
+  .flex-end-modal {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+
+  .flex-end-modal img {
+    padding-right: 10px;
+    padding-top: 8px;
+    cursor: pointer;
+  }
+
+  .form-login {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .login-modal {
+    font-size: 24px;
+    color: #4e2096;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 30px;
+  }
+
+  .email-login-modal {
+    height: 37px;
+    outline: none;
+    background: #ffffff;
+    border: 1px solid #b48cf2;
+    border-radius: 16px;
+    padding-left: 15px;
+    margin-bottom: 20px;
+  }
+
+  .password-login-modal {
+    height: 37px;
+    outline: none;
+    background: #ffffff;
+    border: 1px solid #b48cf2;
+    border-radius: 16px;
+    padding-left: 15px;
+    margin-bottom: 30px;
+  }
+
+  .btn-login-modal {
+    height: 36px;
+    background: #4e2096;
+    border-radius: 16px;
+    border: none;
+    color: #ffffff;
+  }
+
+  .flex-bottom-modal-login {
+    display: flex;
+    gap: 6px;
+    margin-top: 10px;
+  }
+
+  .msg-bottom-modal {
+    font-weight: 400;
+    font-size: 12px;
+    color: #1b1c1e;
+    display: block;
+  }
+
+  .ancora-modal-login {
+    font-size: 12px;
+  }
+
+  .modal-a {
+    position: relative;
+    width: 500px;
+    height: 510px;
+    border-radius: var(--border-radius-1);
+    box-shadow: 2px 5px 15px 5px rgba(0, 0, 0, 0.31);
+    animation: transition 1.4s ease;
+    background: #ffffff;
+    box-shadow: 0px 0px 5px rgba(78, 32, 150, 0.25);
+    border-radius: 16px;
+  }
+
+  .container-modal-a {
+    width: 340px;
+    margin: 0 auto;
+    height: 100%;
+  }
+
+  .top-modal-a {
+    height: 42px;
+    background: #4e2096;
+    border-radius: 16px 16px 0px 0px;
+  }
+
+  .flex-end-modal-a {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+
+  .flex-end-modal-a img {
+    padding-right: 10px;
+    padding-top: 8px;
+    cursor: pointer;
+  }
+
+  .form-login-a {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .login-modal-a {
+    font-size: 24px;
+    color: #4e2096;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+
+  .email-login-modal-a {
+    height: 42px;
+    outline: none;
+    background: #ffffff;
+    border: 1px solid #b48cf2;
+    border-radius: 16px;
+    padding-left: 15px;
+    margin-bottom: 20px;
+  }
+
+  .password-login-modal-a {
+    height: 42px;
+    outline: none;
+    background: #ffffff;
+    border: 1px solid #b48cf2;
+    border-radius: 16px;
+    padding-left: 15px;
+    margin-bottom: 20px;
+  }
+
+  .btn-login-modal-a {
+    height: 36px;
+    background: #4e2096;
+    border-radius: 16px;
+    border: none;
+    color: #ffffff;
+    margin-top: 10px;
+  }
+
+  .flex-bottom-modal-login-a {
+    display: flex;
+    gap: 6px;
+    margin-top: 10px;
+  }
+
+  .msg-bottom-modal-a {
+    font-weight: 400;
+    font-size: 12px;
+    color: #1b1c1e;
+    display: block;
+  }
+
+  .ancora-modal-login-a {
+    font-size: 12px;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .buttons-header {
+    display: flex;
+  }
+
+  .menu-header {
+    display: none;
   }
 
   .img-card {
     height: 180px;
   }
-  
+
   .ul-pets {
     margin-top: 50px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 50px;
     margin-bottom: 60px;
   }
-  
+
   .li-pets {
-    width: 270px;
+    width: 260px;
     height: 300px;
     box-shadow: 0px 0px 5px rgba(78, 32, 150, 0.25);
     border-radius: 4px;
   }
-  
+
   .title-card {
     font-weight: 700;
+    font-size: 25px;
     color: var(--color-brand-1);
     margin-top: 10px;
     margin-left: 10px;
   }
-  
+
+  .small-card {
+    font-weight: 600;
+    font-size: 14px;
+    color: #90a4ae;
+    margin-left: 11px;
+    margin-top: -2px;
+    display: block;
+  }
+}
+
+@media (min-width: 1080px) {
+  .container {
+    width: 760px;
+  }
+
+  .container-header {
+    width: 1040px;
+  }
+
+  .li-pets {
+    width: 215px;
+    height: 270px;
+  }
+
+  .modal {
+    position: relative;
+    width: 500px;
+    height: 312px;
+    border-radius: var(--border-radius-1);
+    box-shadow: 2px 5px 15px 5px rgba(0, 0, 0, 0.31);
+    animation: transition 1.4s ease;
+    top: 70px;
+  }
+
+  .container-modal {
+    width: 430px;
+    margin: 0 auto;
+    height: 100%;
+  }
+
+  .title-card {
+    font-size: 22px;
+  }
+
+  .img-card {
+    height: 160px;
+  }
+
+  .modal {
+    position: relative;
+    width: 500px;
+    height: 402px;
+    border-radius: var(--border-radius-1);
+    box-shadow: 2px 5px 15px 5px rgba(0, 0, 0, 0.31);
+    animation: transition 1.4s ease;
+    background: #ffffff;
+    box-shadow: 0px 0px 5px rgba(78, 32, 150, 0.25);
+    border-radius: 16px;
+  }
+
+  .container-modal {
+    width: 300px;
+    margin: 0 auto;
+    height: 100%;
+  }
+
+  .top-modal {
+    height: 42px;
+    background: #4e2096;
+    border-radius: 16px 16px 0px 0px;
+  }
+
+  .flex-end-modal {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+
+  .flex-end-modal img {
+    padding-right: 10px;
+    padding-top: 8px;
+    cursor: pointer;
+  }
+
+  .form-login {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .login-modal {
+    font-size: 24px;
+    color: #4e2096;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 30px;
+  }
+
+  .email-login-modal {
+    height: 37px;
+    outline: none;
+    background: #ffffff;
+    border: 1px solid #b48cf2;
+    border-radius: 16px;
+    padding-left: 15px;
+    margin-bottom: 20px;
+  }
+
+  .password-login-modal {
+    height: 37px;
+    outline: none;
+    background: #ffffff;
+    border: 1px solid #b48cf2;
+    border-radius: 16px;
+    padding-left: 15px;
+    margin-bottom: 30px;
+  }
+
+  .btn-login-modal {
+    height: 36px;
+    background: #4e2096;
+    border-radius: 16px;
+    border: none;
+    color: #ffffff;
+  }
+
+  .flex-bottom-modal-login {
+    display: flex;
+    gap: 6px;
+    margin-top: 10px;
+  }
+
+  .msg-bottom-modal {
+    font-weight: 400;
+    font-size: 12px;
+    color: #1b1c1e;
+    display: block;
+  }
+
+  .ancora-modal-login {
+    font-size: 12px;
+  }
+
+  .modal-a {
+    position: relative;
+    width: 500px;
+    height: 510px;
+    border-radius: var(--border-radius-1);
+    box-shadow: 2px 5px 15px 5px rgba(0, 0, 0, 0.31);
+    animation: transition 1.4s ease;
+    background: #ffffff;
+    box-shadow: 0px 0px 5px rgba(78, 32, 150, 0.25);
+    border-radius: 16px;
+    top: 45px;
+  }
+
+  .container-modal-a {
+    width: 340px;
+    margin: 0 auto;
+    height: 100%;
+  }
+
+  .top-modal-a {
+    height: 42px;
+    background: #4e2096;
+    border-radius: 16px 16px 0px 0px;
+  }
+
+  .flex-end-modal-a {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+
+  .flex-end-modal-a img {
+    padding-right: 10px;
+    padding-top: 8px;
+    cursor: pointer;
+  }
+
+  .form-login-a {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .login-modal-a {
+    font-size: 24px;
+    color: #4e2096;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+
+  .email-login-modal-a {
+    height: 42px;
+    outline: none;
+    background: #ffffff;
+    border: 1px solid #b48cf2;
+    border-radius: 16px;
+    padding-left: 15px;
+    margin-bottom: 20px;
+  }
+
+  .password-login-modal-a {
+    height: 42px;
+    outline: none;
+    background: #ffffff;
+    border: 1px solid #b48cf2;
+    border-radius: 16px;
+    padding-left: 15px;
+    margin-bottom: 20px;
+  }
+
+  .btn-login-modal-a {
+    height: 36px;
+    background: #4e2096;
+    border-radius: 16px;
+    border: none;
+    margin-top: 10px;
+    color: #ffffff;
+  }
+
+  .flex-bottom-modal-login-a {
+    display: flex;
+    gap: 6px;
+    margin-top: 10px;
+  }
+
+  .msg-bottom-modal-a {
+    font-weight: 400;
+    font-size: 12px;
+    color: #1b1c1e;
+    display: block;
+  }
+
+  .ancora-modal-login-a {
+    font-size: 12px;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .buttons-header {
+    display: flex;
+  }
+
+  .menu-header {
+    display: none;
+  }
+
+  .container {
+    width: 900px;
+  }
+
+  .img-card {
+    height: 200px;
+  }
+
+  .ul-pets {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-bottom: 60px;
+  }
+
+  .li-pets {
+    width: 260px;
+    height: 320px;
+    box-shadow: 0px 0px 5px rgba(78, 32, 150, 0.25);
+    border-radius: 4px;
+  }
+
+  .title-card {
+    font-weight: 700;
+    font-size: 23px;
+    color: var(--color-brand-1);
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
   .small-card {
     font-weight: 600;
     font-size: 13px;
@@ -384,895 +1269,34 @@
     margin-top: -2px;
     display: block;
   }
-  
-  .modal-a {
-      position: relative;
-      width: 350px;
-      height: 402px;
-      border-radius: var(--border-radius-1);
-      box-shadow: 2px 5px 15px 5px rgba(0, 0, 0, 0.31);
-      animation: transition 1.4s ease;
-      background: #ffffff;
-      box-shadow: 0px 0px 5px rgba(78, 32, 150, 0.25);
-      border-radius: 16px;
-      top: 20px;
-    }
-    
-    .modal-container-a {
-      position: fixed;
-      width: 100%;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      top: 0;
-      left: 0;
-      background-color: rgba(0, 0, 0, 0.5);
-    }
-    
-    .container-modal-a {
-      width: 290px;
-      margin: 0 auto;
-      height: 100%;
-    }
-    
-    .top-modal-a {
-      height: 42px;
-      background: #4e2096;
-      border-radius: 16px 16px 0px 0px;
-    }
-    
-    .flex-end-modal-a {
-      display: flex;
-      justify-content: end;
-      align-items: center;
-    }
-    
-    .flex-end-modal-a img {
-      padding-right: 10px;
-      padding-top: 8px;
-      cursor: pointer;
-    }
-    
-    .form-login-a {
-      display: flex;
-      flex-direction: column;
-    }
-    
-    .login-modal-a {
-      font-size: 24px;
-      color: #4e2096;
-      text-align: center;
-      margin-top: 60px;
-      margin-bottom: 30px;
-    }
-    
-    .email-login-modal-a {
-      height: 37px;
-      outline: none;
-      background: #ffffff;
-      border: 1px solid #b48cf2;
-      border-radius: 16px;
-      padding-left: 15px;
-      margin-bottom: 20px;
-    }
-    
-    .password-login-modal-a {
-      height: 37px;
-      outline: none;
-      background: #ffffff;
-      border: 1px solid #b48cf2;
-      border-radius: 16px;
-      padding-left: 15px;
-      margin-bottom: 20px;
-    }
-    
-    .btn-login-modal-a {
-      height: 36px;
-      background: #4e2096;
-      border-radius: 16px;
-      border: none;
-      color: #ffffff;
-      margin-top: 10px;
-    }
-    
-    .flex-bottom-modal-login-a {
-      display: flex;
-      gap: 6px;
-      margin-top: 10px;
-    }
-    
-    .msg-bottom-modal-a {
-      font-weight: 400;
-      font-size: 12px;
-      color: #1b1c1e;
-      display: block;
-    }
-    
-    .ancora-modal-login-a {
-      font-size: 12px;
-      border: none;
-      background-color: #fff;
-      color: #4e2096;
-    }
+}
 
-    .ancora-modal-login-a:hover {
-        text-decoration: underline;
-    }
-  
-  .hidden {
-    display: none;
+@keyframes transition {
+  from {
+    opacity: 0;
+    transform: translateY(-70%);
   }
-  
-  @media (min-width: 375px) {
-    .container-modal {
-      width: 430px;
-      margin: 0 auto;
-      height: 100%;
-    }
-  
-   
-  
-  
-    .modal {
-      position: relative;
-      width: 350px;
-      height: 402px;
-      border-radius: var(--border-radius-1);
-      box-shadow: 2px 5px 15px 5px rgba(0, 0, 0, 0.31);
-      animation: transition 1.4s ease;
-      background: #ffffff;
-      box-shadow: 0px 0px 5px rgba(78, 32, 150, 0.25);
-      border-radius: 16px;
-      top: 30px;
-    }
-  
-    .container-modal {
-      width: 290px;
-      margin: 0 auto;
-      height: 100%;
-    }
-  
-    .top-modal {
-      height: 42px;
-      background: #4e2096;
-      border-radius: 16px 16px 0px 0px;
-    }
-  
-    .flex-end-modal {
-      display: flex;
-      justify-content: end;
-      align-items: center;
-    }
-  
-    .flex-end-modal img {
-      padding-right: 10px;
-      padding-top: 8px;
-      cursor: pointer;
-    }
-  
-    .form-login {
-      display: flex;
-      flex-direction: column;
-    }
-  
-    .login-modal {
-      font-size: 24px;
-      color: #4e2096;
-      text-align: center;
-      margin-top: 60px;
-      margin-bottom: 30px;
-    }
-  
-    .email-login-modal {
-      height: 37px;
-      outline: none;
-      background: #ffffff;
-      border: 1px solid #b48cf2;
-      border-radius: 16px;
-      padding-left: 15px;
-      margin-bottom: 20px;
-    }
-  
-    .password-login-modal {
-      height: 37px;
-      outline: none;
-      background: #ffffff;
-      border: 1px solid #b48cf2;
-      border-radius: 16px;
-      padding-left: 15px;
-      margin-bottom: 30px;
-    }
-  
-    .btn-login-modal {
-      height: 36px;
-      background: #4e2096;
-      border-radius: 16px;
-      border: none;
-      color: #ffffff;
-    }
-  
-    .flex-bottom-modal-login {
-      display: flex;
-      gap: 6px;
-      margin-top: 10px;
-    }
-  
-    .msg-bottom-modal {
-      font-weight: 400;
-      font-size: 12px;
-      color: #1b1c1e;
-      display: block;
-    }
-  
-    .ancora-modal-login {
-      font-size: 12px;
-    }
-  
-    .modal-a {
-      position: relative;
-      width: 350px;
-      height: 510px;
-      border-radius: var(--border-radius-1);
-      box-shadow: 2px 5px 15px 5px rgba(0, 0, 0, 0.31);
-      animation: transition 1.4s ease;
-      background: #ffffff;
-      box-shadow: 0px 0px 5px rgba(78, 32, 150, 0.25);
-      border-radius: 16px;
-    }
-    
-    .container-modal-a {
-      width: 300px;
-      margin: 0 auto;
-      height: 100%;
-    }
-    
-    .top-modal-a {
-      height: 42px;
-      background: #4e2096;
-      border-radius: 16px 16px 0px 0px;
-    }
-    
-    .flex-end-modal-a {
-      display: flex;
-      justify-content: end;
-      align-items: center;
-    }
-    
-    .flex-end-modal-a img {
-      padding-right: 10px;
-      padding-top: 8px;
-      cursor: pointer;
-    }
-    
-    .form-login-a {
-      display: flex;
-      flex-direction: column;
-    }
-    
-    .login-modal-a {
-      font-size: 24px;
-      color: #4e2096;
-      text-align: center;
-      margin-top: 40px;
-      margin-bottom: 30px;
-    }
-    
-    .email-login-modal-a {
-      height: 42px;
-      outline: none;
-      background: #ffffff;
-      border: 1px solid #b48cf2;
-      border-radius: 16px;
-      padding-left: 15px;
-      margin-bottom: 20px;
-    }
-    
-    .password-login-modal-a {
-      height: 42px;
-      outline: none;
-      background: #ffffff;
-      border: 1px solid #b48cf2;
-      border-radius: 16px;
-      padding-left: 15px;
-      margin-bottom: 20px;
-    }
-    
-    .btn-login-modal-a {
-      height: 40px;
-      background: #4e2096;
-      border-radius: 16px;
-      border: none;
-      color: #ffffff;
-      margin-top: 10px;
-    }
-    
-    .flex-bottom-modal-login-a {
-      display: flex;
-      gap: 6px;
-      margin-top: 10px;
-    }
-    
-    .msg-bottom-modal-a {
-      font-weight: 400;
-      font-size: 12px;
-      color: #1b1c1e;
-      display: block;
-    }
-    
-    .ancora-modal-login-a {
-      font-size: 12px;
-    }
-  
-    .hidden {
-      display: none;
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
   }
-  
-  @media (min-width: 768px) {
-    .container {
-      width: 600px;
-    }
-  
-    .ul-pets {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
-  
-    .container-header {
-      width: 600px;
-    }
-  
-  
-    .container-modal {
-      width: 430px;
-      margin: 0 auto;
-      height: 100%;
-    }
-  
-    .title-card {
-      font-size: 21px;
-    }
-  
-    .img-card {
-      height: 160px;
-    }
-  
-    .modal {
-      position: relative;
-      width: 500px;
-      height: 402px;
-      border-radius: var(--border-radius-1);
-      box-shadow: 2px 5px 15px 5px rgba(0, 0, 0, 0.31);
-      animation: transition 1.4s ease;
-      background: #ffffff;
-      box-shadow: 0px 0px 5px rgba(78, 32, 150, 0.25);
-      border-radius: 16px;
-      top: 40px;
-    }
-  
-  
-    .container-modal {
-      width: 360px;
-      margin: 0 auto;
-      height: 100%;
-    }
-  
-    .top-modal {
-      height: 42px;
-      background: #4e2096;
-      border-radius: 16px 16px 0px 0px;
-    }
-  
-    .flex-end-modal {
-      display: flex;
-      justify-content: end;
-      align-items: center;
-    }
-  
-    .flex-end-modal img {
-      padding-right: 10px;
-      padding-top: 8px;
-      cursor: pointer;
-    }
-  
-    .form-login {
-      display: flex;
-      flex-direction: column;
-    }
-  
-    .login-modal {
-      font-size: 24px;
-      color: #4e2096;
-      text-align: center;
-      margin-top: 60px;
-      margin-bottom: 30px;
-    }
-  
-    .email-login-modal {
-      height: 37px;
-      outline: none;
-      background: #ffffff;
-      border: 1px solid #b48cf2;
-      border-radius: 16px;
-      padding-left: 15px;
-      margin-bottom: 20px;
-    }
-  
-    .password-login-modal {
-      height: 37px;
-      outline: none;
-      background: #ffffff;
-      border: 1px solid #b48cf2;
-      border-radius: 16px;
-      padding-left: 15px;
-      margin-bottom: 30px;
-    }
-  
-    .btn-login-modal {
-      height: 36px;
-      background: #4e2096;
-      border-radius: 16px;
-      border: none;
-      color: #ffffff;
-    }
-  
-    .flex-bottom-modal-login {
-      display: flex;
-      gap: 6px;
-      margin-top: 10px;
-    }
-  
-    .msg-bottom-modal {
-      font-weight: 400;
-      font-size: 12px;
-      color: #1b1c1e;
-      display: block;
-    }
-  
-    .ancora-modal-login {
-      font-size: 12px;
-    }
-  
-    .modal-a {
-      position: relative;
-      width: 500px;
-      height: 510px;
-      border-radius: var(--border-radius-1);
-      box-shadow: 2px 5px 15px 5px rgba(0, 0, 0, 0.31);
-      animation: transition 1.4s ease;
-      background: #ffffff;
-      box-shadow: 0px 0px 5px rgba(78, 32, 150, 0.25);
-      border-radius: 16px;
-    }
-    
-  
-    
-    .container-modal-a {
-      width: 340px;
-      margin: 0 auto;
-      height: 100%;
-    }
-    
-    .top-modal-a {
-      height: 42px;
-      background: #4e2096;
-      border-radius: 16px 16px 0px 0px;
-    }
-    
-    .flex-end-modal-a {
-      display: flex;
-      justify-content: end;
-      align-items: center;
-    }
-    
-    .flex-end-modal-a img {
-      padding-right: 10px;
-      padding-top: 8px;
-      cursor: pointer;
-    }
-    
-    .form-login-a {
-      display: flex;
-      flex-direction: column;
-    }
-    
-    .login-modal-a {
-      font-size: 24px;
-      color: #4e2096;
-      text-align: center;
-      margin-top: 40px;
-      margin-bottom: 30px;
-    }
-    
-    .email-login-modal-a {
-      height: 42px;
-      outline: none;
-      background: #ffffff;
-      border: 1px solid #b48cf2;
-      border-radius: 16px;
-      padding-left: 15px;
-      margin-bottom: 20px;
-    }
-    
-    .password-login-modal-a {
-      height: 42px;
-      outline: none;
-      background: #ffffff;
-      border: 1px solid #b48cf2;
-      border-radius: 16px;
-      padding-left: 15px;
-      margin-bottom: 20px;
-    }
-    
-    .btn-login-modal-a {
-      height: 36px;
-      background: #4e2096;
-      border-radius: 16px;
-      border: none;
-      color: #ffffff;
-      margin-top: 10px;
-    }
-    
-    .flex-bottom-modal-login-a {
-      display: flex;
-      gap: 6px;
-      margin-top: 10px;
-    }
-    
-    .msg-bottom-modal-a {
-      font-weight: 400;
-      font-size: 12px;
-      color: #1b1c1e;
-      display: block;
-    }
-    
-    .ancora-modal-login-a {
-      font-size: 12px;
-    }
-  
-    .hidden {
-      display: none;
-    }
-  
-    .buttons-header {
-      display: flex;
-    }
-  
-    .menu-header {
-      display: none;
-    }
-  
-    .img-card {
-        height: 180px;
-    }
+}
 
-    .ul-pets {
-        margin-top: 50px;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 50px;
-        margin-bottom: 60px;
-      }
-      
-      .li-pets {
-        width: 260px;
-        height: 300px;
-        box-shadow: 0px 0px 5px rgba(78, 32, 150, 0.25);
-        border-radius: 4px;
-      }
-
-      .title-card {
-        font-weight: 700;
-        font-size: 25px;
-        color: var(--color-brand-1);
-        margin-top: 10px;
-        margin-left: 10px;
-      }
-      
-      .small-card {
-        font-weight: 600;
-        font-size: 14px;
-        color: #90a4ae;
-        margin-left: 11px;
-        margin-top: -2px;
-        display: block;
-      }
-
-    
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
   }
-  
-  @media (min-width: 1080px) {
-    .container {
-      width: 760px;
-    }
-  
-    .container-header {
-      width: 1050px;
-    }
-  
-    .li-pets {
-      width: 215px;
-      height: 270px;
-    }
-  
-    .modal {
-      position: relative;
-      width: 500px;
-      height: 312px;
-      border-radius: var(--border-radius-1);
-      box-shadow: 2px 5px 15px 5px rgba(0, 0, 0, 0.31);
-      animation: transition 1.4s ease;
-      top: 70px;
-    }
-  
-    .container-modal {
-      width: 430px;
-      margin: 0 auto;
-      height: 100%;
-    }
-  
-    .title-card {
-      font-size: 21px;
-    }
-  
-    .img-card {
-      height: 160px;
-    }
-  
-    .modal {
-      position: relative;
-      width: 500px;
-      height: 402px;
-      border-radius: var(--border-radius-1);
-      box-shadow: 2px 5px 15px 5px rgba(0, 0, 0, 0.31);
-      animation: transition 1.4s ease;
-      background: #ffffff;
-      box-shadow: 0px 0px 5px rgba(78, 32, 150, 0.25);
-      border-radius: 16px;
-    }
-  
-    .container-modal {
-      width: 300px;
-      margin: 0 auto;
-      height: 100%;
-    }
-  
-    .top-modal {
-      height: 42px;
-      background: #4e2096;
-      border-radius: 16px 16px 0px 0px;
-    }
-  
-    .flex-end-modal {
-      display: flex;
-      justify-content: end;
-      align-items: center;
-    }
-  
-    .flex-end-modal img {
-      padding-right: 10px;
-      padding-top: 8px;
-      cursor: pointer;
-    }
-  
-    .form-login {
-      display: flex;
-      flex-direction: column;
-    }
-  
-    .login-modal {
-      font-size: 24px;
-      color: #4e2096;
-      text-align: center;
-      margin-top: 60px;
-      margin-bottom: 30px;
-    }
-  
-    .email-login-modal {
-      height: 37px;
-      outline: none;
-      background: #ffffff;
-      border: 1px solid #b48cf2;
-      border-radius: 16px;
-      padding-left: 15px;
-      margin-bottom: 20px;
-    }
-  
-    .password-login-modal {
-      height: 37px;
-      outline: none;
-      background: #ffffff;
-      border: 1px solid #b48cf2;
-      border-radius: 16px;
-      padding-left: 15px;
-      margin-bottom: 30px;
-    }
-  
-    .btn-login-modal {
-      height: 36px;
-      background: #4e2096;
-      border-radius: 16px;
-      border: none;
-      color: #ffffff;
-    }
-  
-    .flex-bottom-modal-login {
-      display: flex;
-      gap: 6px;
-      margin-top: 10px;
-    }
-  
-    .msg-bottom-modal {
-      font-weight: 400;
-      font-size: 12px;
-      color: #1b1c1e;
-      display: block;
-    }
-  
-    .ancora-modal-login {
-      font-size: 12px;
-    }
-  
-    .modal-a {
-      position: relative;
-      width: 500px;
-      height: 510px;
-      border-radius: var(--border-radius-1);
-      box-shadow: 2px 5px 15px 5px rgba(0, 0, 0, 0.31);
-      animation: transition 1.4s ease;
-      background: #ffffff;
-      box-shadow: 0px 0px 5px rgba(78, 32, 150, 0.25);
-      border-radius: 16px;
-      top: 45px;
-    }
-    
-  
-    
-    .container-modal-a {
-      width: 340px;
-      margin: 0 auto;
-      height: 100%;
-    }
-    
-    .top-modal-a {
-      height: 42px;
-      background: #4e2096;
-      border-radius: 16px 16px 0px 0px;
-    }
-    
-    .flex-end-modal-a {
-      display: flex;
-      justify-content: end;
-      align-items: center;
-    }
-    
-    .flex-end-modal-a img {
-      padding-right: 10px;
-      padding-top: 8px;
-      cursor: pointer;
-    }
-    
-    .form-login-a {
-      display: flex;
-      flex-direction: column;
-    }
-    
-    .login-modal-a {
-      font-size: 24px;
-      color: #4e2096;
-      text-align: center;
-      margin-top: 40px;
-      margin-bottom: 30px;
-    }
-    
-    .email-login-modal-a {
-      height: 42px;
-      outline: none;
-      background: #ffffff;
-      border: 1px solid #b48cf2;
-      border-radius: 16px;
-      padding-left: 15px;
-      margin-bottom: 20px;
-    }
-    
-    .password-login-modal-a {
-      height: 42px;
-      outline: none;
-      background: #ffffff;
-      border: 1px solid #b48cf2;
-      border-radius: 16px;
-      padding-left: 15px;
-      margin-bottom: 20px;
-    }
-    
-    .btn-login-modal-a {
-      height: 36px;
-      background: #4e2096;
-      border-radius: 16px;
-      border: none;
-      margin-top: 10px;
-      color: #ffffff;
-    }
-    
-    .flex-bottom-modal-login-a {
-      display: flex;
-      gap: 6px;
-      margin-top: 10px;
-    }
-    
-    .msg-bottom-modal-a {
-      font-weight: 400;
-      font-size: 12px;
-      color: #1b1c1e;
-      display: block;
-    }
-    
-    .ancora-modal-login-a {
-      font-size: 12px;
-    }
-  
-    .hidden {
-      display: none;
-    }
-  
-    .buttons-header {
-      display: flex;
-    }
-  
-    .menu-header {
-      display: none;
-    }
 
-    .container {
-        width: 900px;
-    }
-
-    .img-card {
-        height: 200px;
-    }
-
-    .ul-pets {
-        margin-top: 50px;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 50px;
-        margin-bottom: 60px;
-      }
-      
-      .li-pets {
-        width: 260px;
-        height: 320px;
-        box-shadow: 0px 0px 5px rgba(78, 32, 150, 0.25);
-        border-radius: 4px;
-      }
-
-      .title-card {
-        font-weight: 700;
-        font-size: 23px;
-        color: var(--color-brand-1);
-        margin-top: 10px;
-        margin-left: 10px;
-      }
-      
-      .small-card {
-        font-weight: 600;
-        font-size: 13px;
-        color: #90a4ae;
-        margin-left: 11px;
-        margin-top: -2px;
-        display: block;
-      }
+  100% {
+    transform: rotate(360deg);
   }
-  
-  @keyframes transition {
-    from {
-      opacity: 0;
-      transform: translateY(-70%);
-    } to {
-      opacity: 1;
-      transform: translateY(0%);
-    }
+}
+
+@keyframes smoothShow {
+  0% {
+    opacity: 0;
   }
+  100% {
+    opacity: 1;
+  }
+}
