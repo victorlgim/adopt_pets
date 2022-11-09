@@ -46,28 +46,11 @@ function openModal(child) {
   }
 }
 
-let body = {
-  email: "edu123@mail.com",
-  password: "123456",
-}
-const optionsTest = {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify(body),
-}
-const loginTest = await fetch(
-  "https://m2-api-adot-pet.herokuapp.com/session/login",
-  optionsTest
-)
-const loginTestJson = await loginTest.json()
-localStorage.setItem("user-login", loginTestJson.token)
-
 const token = localStorage.getItem("user-login")
 const initPerfil = await getApiUserInformations()
 const initUserPets = await getApiUserPets()
 
+// apaga do local storage e redireciona pra pagina principal
 function logoutEvent() {
   const button = document.querySelector("#logout")
   button.addEventListener("click", () => {
@@ -76,6 +59,7 @@ function logoutEvent() {
   })
 }
 
+//recebe informações do usuario, zera a ul e renderiza
 async function renderUserInformations(perfil) {
   if (perfil) {
     const imgAvatar = document.querySelector("#avatar")
@@ -93,6 +77,7 @@ async function renderUserInformations(perfil) {
   }
 }
 
+//recebe lista de pets, zera a ul e renderiza
 function renderUserPets(pets) {
   const ulPetsList = document.querySelector("#petsList")
   ulPetsList.innerHTML = ""
@@ -147,6 +132,15 @@ function renderUserPets(pets) {
       ulPetsList.appendChild(li)
     })
   }
+}
+
+async function updateUserInformationsEvent() {
+  const buttonUpdate = document.querySelector("#updateUser")
+  buttonUpdate.addEventListener("click", () => {
+    const pTitle = document.createElement("p")
+    const form = document.createElement("form")
+    const inputName = document.createElement("input")
+  })
 }
 
 logoutEvent()
