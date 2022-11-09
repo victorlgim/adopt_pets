@@ -224,5 +224,7 @@ export { register, login, getApiUserInformations,
          getApiUserPets, getReadAllAdoptions, getReadAdoptionsById,
          getReadMyAdoptions, patchUpdateAdoptionById, deleteAdoptionById };
 
+export { register, login, getApiUserInformations, getApiUserPets, getPetsAdopt };
+
 
 
