@@ -113,7 +113,8 @@ async function getApiUserPets() {
   }
 }
 
-export { register, login, getApiUserInformations, getApiUserPets };
+
+export { register, login, getApiUserInformations, getApiUserPets, getPetsAdopt };
 
 
 
