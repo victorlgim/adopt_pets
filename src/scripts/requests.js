@@ -113,7 +113,116 @@ async function getApiUserPets() {
   }
 }
 
-export { register, login, getApiUserInformations, getApiUserPets };
+async function  getReadAllAdoptions() {
+  const token = localStorage.getItem("token")
+
+  const options = {
+    method: "GET",
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  }
+  try {
+    const responseJson = await fetch(`${baseURL}/adoptions`, options)
+    if (!responseJson.ok) {
+      console.log(responseJson.message)
+    } else {
+      return await responseJson.json()
+    }
+  } catch (err) {
+    console.log(err)
+  }
+}
+
+async function  getReadAdoptionsById(id) {
+  const token = localStorage.getItem("token")
+
+  const options = {
+    method: "GET",
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  }
+  try {
+    const responseJson = await fetch(`${baseURL}/adoptions/${id}`, options)
+    if (!responseJson.ok) {
+      console.log(responseJson.message)
+    } else {
+      return await responseJson.json()
+    }
+  } catch (err) {
+    console.log(err)
+  }
+}
+
+async function  getReadMyAdoptions() {
+  const token = localStorage.getItem("token")
+
+  const options = {
+    method: "GET",
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  }
+  try {
+    const responseJson = await fetch(`${baseURL}/adoptions/myAdoptions`, options)
+    if (!responseJson.ok) {
+      console.log(responseJson.message)
+    } else {
+      return await responseJson.json()
+    }
+  } catch (err) {
+    console.log(err)
+  }
+}
+
+async function  patchUpdateAdoptionById(id, body) {
+  const token = localStorage.getItem("token")
+
+  const options = {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify(body)
+  }
+  try {
+    const responseJson = await fetch(`${baseURL}/adoptions/update/${id}`, options)
+    if (!responseJson.ok) {
+      console.log(responseJson.message)
+    } else {
+      return await responseJson.json()
+    }
+  } catch (err) {
+    console.log(err)
+  }
+}
+
+async function  deleteAdoptionById(id) {
+  const token = localStorage.getItem("token")
+
+  const options = {
+    method: "DELETE",
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  }
+  try {
+    const responseJson = await fetch(`${baseURL}/adoptions/delete/${id}`, options)
+    if (!responseJson.ok) {
+      console.log(responseJson.message)
+    } else {
+      return await responseJson.json()
+    }
+  } catch (err) {
+    console.log(err)
+  }
+}
+
+export { register, login, getApiUserInformations,
+         getApiUserPets, getReadAllAdoptions, getReadAdoptionsById,
+         getReadMyAdoptions, patchUpdateAdoptionById, deleteAdoptionById };
 
 
 

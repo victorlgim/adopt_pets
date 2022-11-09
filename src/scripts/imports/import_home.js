@@ -14,3 +14,5 @@ entryToLogin()
 cleanInputPwd()
 cleanPwd()
 cleanInputEmail()
+
+
