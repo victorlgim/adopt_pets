@@ -40,8 +40,8 @@ header {
 
 .button-border-red {
   background: var(--color-white);
-  border: 1px solid var(--color-red);
-  color: var(--color-red);
+  border: 1px solid #ea534a;
+  color: #ea534a;
 }
 
 .button-border-red:hover {
@@ -96,6 +96,7 @@ header {
   margin-top: -11.375rem;
   max-width: 100%;
   width: 20rem;
+  height: 20rem;
   border-radius: 50%;
   border: 0.313rem solid var(--color-white);
   object-fit: cover;
@@ -125,10 +126,10 @@ header {
   font-weight: 600;
   font-size: var(--size-title-buttons);
 }
-.user-informations > .user-informations-text .color-brand-1 {
+.color-brand-1 {
   color: var(--color-brand-1);
 }
-.user-informations > .user-informations-text .color-black {
+.color-black {
   color: #000000;
 }
 .user-informations .user-informations-buttons {

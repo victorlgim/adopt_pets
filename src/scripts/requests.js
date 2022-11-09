@@ -67,4 +67,53 @@ async function login(body) {
   }
 }
 
-export { register, login };
+const baseURL = "https://m2-api-adot-pet.herokuapp.com"
+
+async function getApiUserInformations() {
+  const token = localStorage.getItem("token")
+
+  const options = {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+  }
+  try {
+    const responseJson = await fetch(`${baseURL}/users/profile`, options)
+    if (!responseJson.ok) {
+      console.log(responseJson.message)
+    } else {
+      return await responseJson.json()
+    }
+  } catch (err) {
+    console.log(err)
+  }
+}
+
+async function getApiUserPets() {
+  const token = localStorage.getItem("token")
+
+  const options = {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+  }
+  try {
+    const responseJson = await fetch(`${baseURL}/pets/my_pets`, options)
+    if (!responseJson.ok) {
+      console.log(responseJson.message)
+    } else {
+      return await responseJson.json()
+    }
+  } catch (err) {
+    console.log(err)
+  }
+}
+
+export { register, login, getApiUserInformations, getApiUserPets };
+
+
+

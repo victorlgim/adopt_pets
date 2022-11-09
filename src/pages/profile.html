@@ -7,6 +7,7 @@
     <title>Perfil-KenziePets</title>
     <link rel="stylesheet" href="../styles/globalStyles.css" />
     <link rel="stylesheet" href="../styles/profile.css" />
+    <link rel="stylesheet" href="../styles/modalProfile.css" />
   </head>
   <body>
     <header class="container">
@@ -15,33 +16,35 @@
         <img src="../assets/vector.png" alt="" />
       </button>
       <nav class="desk-buttons">
-        <a class="button button-header button-border-brand" href="">Home</a>
-        <button class="button button-header button-brand">Logout</button>
+        <a
+          class="button button-header button-border-brand"
+          href="./principal.html"
+          >Home</a
+        >
+        <button id="logout" class="button button-header button-brand">
+          Logout
+        </button>
       </nav>
     </header>
     <div class="box-brand"></div>
     <main class="container">
       <section>
         <div class="user-image">
-          <img class="user-img" src="../assets/profile-img.svg" alt="" />
+          <img id="avatar" class="user-img" />
           <div class="user-informations">
             <h2>Dados pessoais</h2>
             <div class="user-informations-text">
               <p>
                 <span class="color-brand-1">Nome: </span
-                ><span class="color-black">Kenzinha</span>
+                ><span id="name" class="color-black"></span>
               </p>
               <p>
                 <span class="color-brand-1">Email: </span
-                ><span class="color-black">Kenzinha@kenzie.com.br</span>
-              </p>
-              <p>
-                <span class="color-brand-1">Data de nascimento: </span
-                ><span class="color-black">21/03/2000</span>
+                ><span id="email" class="color-black"></span>
               </p>
             </div>
             <div class="user-informations-buttons">
-              <button class="button button-user button-brand">
+              <button id="updateUser" class="button button-user button-brand">
                 Atualizar informações
               </button>
               <button class="button button-user button-border-red">
@@ -57,117 +60,7 @@
             Cadastrar novo pet
           </button>
         </div>
-        <ul class="cards-list">
-          <li class="card">
-            <img src="../assets/bidu.svg" alt="" />
-            <div>
-              <p>
-                <span class="color-brand-1">Nome: </span
-                ><span class="color-black">Bidu</span>
-              </p>
-              <p>
-                <span class="color-brand-1">Espécie: </span
-                ><span class="color-black">Cachorro</span>
-              </p>
-              <p>
-                <span class="color-brand-1">Adotável: </span
-                ><span class="color-black">Sim</span>
-              </p>
-              <button class="button button-user button-brand">Atualizar</button>
-            </div>
-          </li>
-
-          <li class="card">
-            <img src="../assets/bidu.svg" alt="" />
-            <div>
-              <p>
-                <span class="color-brand-1">Nome: </span
-                ><span class="color-black">Bidu</span>
-              </p>
-              <p>
-                <span class="color-brand-1">Espécie: </span
-                ><span class="color-black">Cachorro</span>
-              </p>
-              <p>
-                <span class="color-brand-1">Adotável: </span
-                ><span class="color-black">Sim</span>
-              </p>
-              <button class="button button-user button-brand">Atualizar</button>
-            </div>
-          </li>
-          <li class="card">
-            <img src="../assets/bidu.svg" alt="" />
-            <div>
-              <p>
-                <span class="color-brand-1">Nome: </span
-                ><span class="color-black">Bidu</span>
-              </p>
-              <p>
-                <span class="color-brand-1">Espécie: </span
-                ><span class="color-black">Cachorro</span>
-              </p>
-              <p>
-                <span class="color-brand-1">Adotável: </span
-                ><span class="color-black">Sim</span>
-              </p>
-              <button class="button button-user button-brand">Atualizar</button>
-            </div>
-          </li>
-          <li class="card">
-            <img src="../assets/bidu.svg" alt="" />
-            <div>
-              <p>
-                <span class="color-brand-1">Nome: </span
-                ><span class="color-black">Bidu</span>
-              </p>
-              <p>
-                <span class="color-brand-1">Espécie: </span
-                ><span class="color-black">Cachorro</span>
-              </p>
-              <p>
-                <span class="color-brand-1">Adotável: </span
-                ><span class="color-black">Sim</span>
-              </p>
-              <button class="button button-user button-brand">Atualizar</button>
-            </div>
-          </li>
-          <li class="card">
-            <img src="../assets/bidu.svg" alt="" />
-            <div>
-              <p>
-                <span class="color-brand-1">Nome: </span
-                ><span class="color-black">Bidu</span>
-              </p>
-              <p>
-                <span class="color-brand-1">Espécie: </span
-                ><span class="color-black">Cachorro</span>
-              </p>
-              <p>
-                <span class="color-brand-1">Adotável: </span
-                ><span class="color-black">Sim</span>
-              </p>
-              <button class="button button-user button-brand">Atualizar</button>
-            </div>
-          </li>
-          <li class="card">
-            <img src="../assets/bidu.svg" alt="" />
-            <div>
-              <p>
-                <span class="color-brand-1">Nome: </span
-                ><span class="color-black">Bidu</span>
-              </p>
-              <p>
-                <span class="color-brand-1">Espécie: </span
-                ><span class="color-black">Cachorro</span>
-              </p>
-              <p>
-                <span class="color-brand-1">Adotável: </span
-                ><span class="color-black">Sim</span>
-              </p>
-              <button class="button button-user button-brand">Atualizar</button>
-            </div>
-          </li>
-        </ul>
+        <ul id="petsList" class="cards-list"></ul>
       </section>
     </main>
     <footer><p>KenziePets | Todos os Direitos Reservados</p></footer>
