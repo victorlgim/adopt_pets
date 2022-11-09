@@ -37,4 +37,33 @@ function toggleOpenModalHomePage() {
  })
 }
 
-export { toggleOpenModalHomePage }
+function toggleBetweenDiretoryModal() {
+    const toggleRegister = document.querySelector('.ancora-modal-login-a')
+    const toggleLogin = document.querySelector('.ancora-modal-login')
+    const login = document.querySelector('.modal-container')
+    const register = document.querySelector('.modal-container-a')
+    const formRegister = document.querySelector(".form-login-a");
+    const formLogin = document.querySelector('.form-login')
+    const span = document.querySelector(".msg-error-email");
+    const inputEmail = document.querySelector(".password-login-modal-a");
+    const inputPwd = document.querySelector(".password-login-modal");
+    const spanTwo = document.querySelector(".msg-error");
+
+    toggleRegister.addEventListener('click', () => {
+        register.classList.add('hidden')
+        login.classList.remove('hidden')
+        formRegister.reset()
+        span.classList.add("hidden");
+        inputEmail.style.border = "1px solid #b48cf2";
+    })
+
+    toggleLogin.addEventListener('click', () => {
+        login.classList.add('hidden')
+        register.classList.remove('hidden')
+        formLogin.reset()
+        spanTwo.classList.add('hidden')
+        inputPwd.style.border = "1px solid #b48cf2";
+    })
+}
+
+export { toggleOpenModalHomePage, toggleBetweenDiretoryModal }
