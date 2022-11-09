@@ -1,4 +1,6 @@
-// CHAMAR AS FUNÇÕES DE DROPDOWN NAS RESPECTIVAS PASTAS DO IMPORT
-import { switchButtons } from "../dropdown.js";
 
-switchButtons()
+buttonLogout.addEventListener("click", ()=>{
+    setTimeout(()=>{
+        window.location.assign(`${window.location.origin}/index.html`)
+    },1000)
+})
