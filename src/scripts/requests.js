@@ -51,8 +51,10 @@ async function login(body) {
 
     if (request.ok) {
       const response = await request.json();
+      console.log(response.user)
+      console.log(response.token)
       localStorage.setItem("token", response.token);
-      localStorage.setItem("user", response.user);
+      localStorage.setItem("user", JSON.stringify(response.user));
       setTimeout(() => {
         window.location.replace("./src/pages/profile.html");
       }, 2000);
@@ -122,6 +124,7 @@ async function  getReadAllAdoptions() {
       Authorization: `Bearer ${token}`,
     },
   }
+
   try {
     const responseJson = await fetch(`${baseURL}/adoptions`, options)
     if (!responseJson.ok) {
