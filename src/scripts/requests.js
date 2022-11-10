@@ -159,15 +159,16 @@ async function getApiDeleteUser() {
     modalContainer.classList.remove("hidden");
     const responseJson = await fetch(`${baseURL}/users/profile`, options);
     if (!responseJson.ok) {
-      const response = await responseJson.json();
-      console.log(response.message);
+      console.log('Erro');
     } else {
       toastDeleteHeader();
       setTimeout(() => {
         modalContainer.classList.add("hidden");
       }, 4000);
-      return await responseJson.json();
+
     }
+    const response = await responseJson.json();
+    return response
   } catch (err) {
     console.log(err);
   }
