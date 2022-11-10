@@ -24,6 +24,7 @@ async function register(body) {
       },
       body: JSON.stringify(body),
     });
+    console.log(request);
     const button = document.querySelector(".btn-login-modal-a");
     button.innerHTML = `<img src='./src/assets/spinner.png' class='spinner-img'>`;
     if (request.ok) {
@@ -35,14 +36,15 @@ async function register(body) {
         resetFormRegister();
         button.innerHTML = "Cadastrar";
       }, 5000);
-      const data = await request.json();
-      return data;
     } else {
       setTimeout(() => {
         renderErrorEmail();
         button.innerHTML = "Cadastrar";
       }, 3000);
     }
+    const data = await request.json();
+    console.log(data);
+    return data;
   } catch (err) {
     console.log(err);
   }
@@ -125,7 +127,6 @@ async function getApiProfileUpdate(body) {
     modalContainer.classList.remove("hidden");
     const responseJson = await fetch(`${baseURL}/users/profile`, options);
     if (!responseJson.ok) {
-      const response = await responseJson.json();
       console.log(response.message);
     } else {
       setTimeout(() => {
@@ -135,8 +136,9 @@ async function getApiProfileUpdate(body) {
       setTimeout(() => {
         modalContainer.classList.add("hidden");
       }, 3000);
-      return await responseJson.json();
     }
+    const response = await responseJson.json();
+    return response;
   } catch (err) {
     console.log(err);
   }
@@ -326,9 +328,11 @@ async function getApiRegisterPet(body) {
     const modalContainer = document.querySelector(".modal-loading");
     modalContainer.classList.remove("hidden");
     const responseJson = await fetch(`${baseURL}/pets`, options);
+    console.log(responseJson);
     if (!responseJson.ok) {
       const response = await responseJson.json();
       console.log(response.message);
+      modalContainer.classList.add("hidden");
     } else {
       toastCreatePets();
       setTimeout(() => {
