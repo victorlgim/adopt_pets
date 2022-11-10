@@ -366,16 +366,15 @@ async function getApiUpdatePet(body, id) {
     modalContainer.classList.remove("hidden");
     const responseJson = await fetch(`${baseURL}/pets/${id}`, options);
     if (!responseJson.ok) {
-      const response = await responseJson.json();
-      console.log(response.message);
+      console.log('Error');
     } else {
       toastAttPets();
       setTimeout(() => {
         modalContainer.classList.add("hidden");
       }, 4000);
-
-      return await responseJson.json();
     }
+    const response = await responseJson.json();
+    return response
   } catch (err) {
     console.log(err);
   }
