@@ -21,6 +21,7 @@ function renderCardsPrincipal(list){
         divBtn.classList.add('div-btn-adopt')
         btnAdopt.classList.add('btn-adopt')
         btnAdopt.innerText = 'Me adote'
+        btnAdopt.id = element.pet.id
 
         divBtn.appendChild(btnAdopt)
         divInformation.append(h2,span)

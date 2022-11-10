@@ -1,5 +1,10 @@
-import { renderError } from "./homepage/login.js";
-import { renderErrorEmail, verifyStatusOkRegister, resetFormRegister, toastVerifyRegister } from "./homepage/register.js";
+import { renderError } from "./homepage/login.js"
+import {
+  renderErrorEmail,
+  verifyStatusOkRegister,
+  resetFormRegister,
+  toastVerifyRegister,
+} from "./homepage/register.js"
 
 async function register(body) {
   try {
@@ -9,28 +14,28 @@ async function register(body) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(body),
-    });
-    const button = document.querySelector(".btn-login-modal-a");
-    button.innerHTML = `<img src='./src/assets/spinner.png' class='spinner-img'>`;
+    })
+    const button = document.querySelector(".btn-login-modal-a")
+    button.innerHTML = `<img src='./src/assets/spinner.png' class='spinner-img'>`
     if (request.ok) {
       setTimeout(() => {
-        toastVerifyRegister();
-      }, 3000);
+        toastVerifyRegister()
+      }, 3000)
       setTimeout(() => {
-        verifyStatusOkRegister();
-        resetFormRegister();
-        button.innerHTML = "Cadastrar";
-      }, 5000);
-      const data = await request.json();
-      return data;
+        verifyStatusOkRegister()
+        resetFormRegister()
+        button.innerHTML = "Cadastrar"
+      }, 5000)
+      const data = await request.json()
+      return data
     } else {
       setTimeout(() => {
-        renderErrorEmail();
-        button.innerHTML = "Cadastrar";
-      }, 3000);
+        renderErrorEmail()
+        button.innerHTML = "Cadastrar"
+      }, 3000)
     }
   } catch (err) {
-    console.log(err);
+    console.log(err)
   }
 }
 
@@ -45,9 +50,9 @@ async function login(body) {
         },
         body: JSON.stringify(body),
       }
-    );
-    const button = document.querySelector(".btn-login-modal");
-    button.innerHTML = `<img src='./src/assets/spinner.png' class='spinner-img'>`;
+    )
+    const button = document.querySelector(".btn-login-modal")
+    button.innerHTML = `<img src='./src/assets/spinner.png' class='spinner-img'>`
 
     if (request.ok) {
       const response = await request.json();
@@ -55,17 +60,18 @@ async function login(body) {
       console.log(response.token)
       localStorage.setItem("token", response.token);
       localStorage.setItem("user", JSON.stringify(response.user));
+
       setTimeout(() => {
-        window.location.replace("./src/pages/profile.html");
-      }, 2000);
+        window.location.replace("./src/pages/profile.html")
+      }, 2000)
     } else {
       setTimeout(() => {
-        renderError();
-        button.innerHTML = "Entrar";
-      }, 2000);
+        renderError()
+        button.innerHTML = "Entrar"
+      }, 2000)
     }
   } catch (err) {
-    console.log(err);
+    console.log(err)
   }
 }
 
@@ -84,7 +90,55 @@ async function getApiUserInformations() {
   try {
     const responseJson = await fetch(`${baseURL}/users/profile`, options)
     if (!responseJson.ok) {
-      console.log(responseJson.message)
+      const response = await responseJson.json()
+      console.log(response.message)
+    } else {
+      return await responseJson.json()
+    }
+  } catch (err) {
+    console.log(err)
+  }
+}
+
+async function getApiProfileUpdate(body) {
+  const token = localStorage.getItem("token")
+
+  const options = {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify(body),
+  }
+  try {
+    const responseJson = await fetch(`${baseURL}/users/profile`, options)
+    if (!responseJson.ok) {
+      const response = await responseJson.json()
+      console.log(response.message)
+    } else {
+      return await responseJson.json()
+    }
+  } catch (err) {
+    console.log(err)
+  }
+}
+
+async function getApiDeleteUser(body) {
+  const token = localStorage.getItem("token")
+
+  const options = {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+  }
+  try {
+    const responseJson = await fetch(`${baseURL}/users/profile`, options)
+    if (!responseJson.ok) {
+      const response = await responseJson.json()
+      console.log(response.message)
     } else {
       return await responseJson.json()
     }
@@ -106,7 +160,8 @@ async function getApiUserPets() {
   try {
     const responseJson = await fetch(`${baseURL}/pets/my_pets`, options)
     if (!responseJson.ok) {
-      console.log(responseJson.message)
+      const response = await responseJson.json()
+      console.log(response.message)
     } else {
       return await responseJson.json()
     }
@@ -115,7 +170,7 @@ async function getApiUserPets() {
   }
 }
 
-async function  getReadAllAdoptions() {
+async function getReadAllAdoptions() {
   const token = localStorage.getItem("token")
 
   const options = {
@@ -137,7 +192,7 @@ async function  getReadAllAdoptions() {
   }
 }
 
-async function  getReadAdoptionsById(id) {
+async function getReadAdoptionsById(id) {
   const token = localStorage.getItem("token")
 
   const options = {
@@ -158,7 +213,7 @@ async function  getReadAdoptionsById(id) {
   }
 }
 
-async function  getReadMyAdoptions() {
+async function getReadMyAdoptions() {
   const token = localStorage.getItem("token")
 
   const options = {
@@ -168,7 +223,10 @@ async function  getReadMyAdoptions() {
     },
   }
   try {
-    const responseJson = await fetch(`${baseURL}/adoptions/myAdoptions`, options)
+    const responseJson = await fetch(
+      `${baseURL}/adoptions/myAdoptions`,
+      options
+    )
     if (!responseJson.ok) {
       console.log(responseJson.message)
     } else {
@@ -179,7 +237,7 @@ async function  getReadMyAdoptions() {
   }
 }
 
-async function  patchUpdateAdoptionById(id, body) {
+async function patchUpdateAdoptionById(id, body) {
   const token = localStorage.getItem("token")
 
   const options = {
@@ -188,10 +246,13 @@ async function  patchUpdateAdoptionById(id, body) {
       "Content-Type": "application/json",
       Authorization: `Bearer ${token}`,
     },
-    body: JSON.stringify(body)
+    body: JSON.stringify(body),
   }
   try {
-    const responseJson = await fetch(`${baseURL}/adoptions/update/${id}`, options)
+    const responseJson = await fetch(
+      `${baseURL}/adoptions/update/${id}`,
+      options
+    )
     if (!responseJson.ok) {
       console.log(responseJson.message)
     } else {
@@ -202,7 +263,7 @@ async function  patchUpdateAdoptionById(id, body) {
   }
 }
 
-async function  deleteAdoptionById(id) {
+async function deleteAdoptionById(id) {
   const token = localStorage.getItem("token")
 
   const options = {
@@ -212,7 +273,10 @@ async function  deleteAdoptionById(id) {
     },
   }
   try {
-    const responseJson = await fetch(`${baseURL}/adoptions/delete/${id}`, options)
+    const responseJson = await fetch(
+      `${baseURL}/adoptions/delete/${id}`,
+      options
+    )
     if (!responseJson.ok) {
       console.log(responseJson.message)
     } else {
@@ -223,10 +287,66 @@ async function  deleteAdoptionById(id) {
   }
 }
 
-export { register, login, getApiUserInformations,
-         getApiUserPets, getReadAllAdoptions, getReadAdoptionsById,
-         getReadMyAdoptions, patchUpdateAdoptionById, deleteAdoptionById };
+async function getApiRegisterPet(body) {
+  const token = localStorage.getItem("token")
 
+  const options = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify(body),
+  }
+  try {
+    const responseJson = await fetch(`${baseURL}/pets`, options)
+    if (!responseJson.ok) {
+      const response = await responseJson.json()
+      console.log(response.message)
+    } else {
+      return await responseJson.json()
+    }
+  } catch (err) {
+    console.log(err)
+  }
+}
 
+async function getApiUpdatePet(body, id) {
+  const token = localStorage.getItem("token")
 
+  const options = {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify(body),
+  }
+  try {
+    const responseJson = await fetch(`${baseURL}/pets/${id}`, options)
+    if (!responseJson.ok) {
+      const response = await responseJson.json()
+      console.log(response.message)
+    } else {
+      return await responseJson.json()
+    }
+  } catch (err) {
+    console.log(err)
+  }
+}
 
+export {
+  register,
+  login,
+  getApiUserInformations,
+  getApiUserPets,
+  getReadAllAdoptions,
+  getReadAdoptionsById,
+  getReadMyAdoptions,
+  patchUpdateAdoptionById,
+  deleteAdoptionById,
+  getApiProfileUpdate,
+  getApiDeleteUser,
+  getApiRegisterPet,
+  getApiUpdatePet,
+}
