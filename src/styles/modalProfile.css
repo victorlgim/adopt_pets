@@ -5,7 +5,6 @@
   width: 100vw;
   display: flex;
   justify-content: center;
-  align-items: center;
   top: 0;
   left: 0;
 }
@@ -19,7 +18,11 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  animation: transition 1.4s ease;
+  position: absolute;
+  top: 40px;
 }
+
 .button-close-container {
   display: flex;
   align-items: center;
@@ -32,7 +35,6 @@
 }
 .purple-box {
   height: 0.75rem;
-  background: var(--color-brand-1);
   border-radius: 0 0 1rem 1rem;
 }
 
@@ -80,11 +82,363 @@
   font-weight: 400;
   font-size: 1rem;
   color: var(--color-brand-2);
-  padding: 0 10px;
+  padding: 0 15px;
   width: 300px;
 }
 .modal-container-content input::placeholder {
   font-weight: 400;
   font-size: 1rem;
   color: var(--color-brand-2);
+}
+
+@media (min-width: 1000px) {
+   .modal-container {
+    top: 50px;
+   }
+}
+
+@media (min-width: 1000px) {
+
+  .modal-container-verify-att-header {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .modal-verify-att-header {
+    background: #fcfeff;
+    box-shadow: 0px 4px 30px -12px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    width: 500px;
+    height: 130px;
+    position: absolute;
+    box-shadow: 1px 3px 15px 0px rgba(0, 0, 0, 0.51);
+    right: 30px;
+    animation: smooth 4000ms ease-in forwards;
+    bottom: 20px;
+  }
+
+  .modal-header-att-header {
+    display: flex;
+    margin-top: 20px;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+
+  .modal-header-att-header h3 {
+    color: #087f5b;
+    font-size: 16px;
+  }
+
+  .modal-verify-att-header p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #343a40;
+    margin-top: 15px;
+    text-align: start;
+    
+  }
+
+  .image-modal-att-header {
+    background-color: #087f5b;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    text-align: center;
+  }
+
+  .image-modal-att-header img {
+    height: 11px;
+    width: 14px;
+  }
+
+  .acess-login-att-header {
+    display: inline;
+    margin-left: 10px;
+  }
+
+  .container-modal-verify-att-header {
+    width: 440px;
+    margin: 0 auto;
+  }
+
+
+
+
+
+
+  .modal-container-verify-delete-account {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .modal-verify-delete-account {
+    background: #fcfeff;
+    box-shadow: 0px 4px 30px -12px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    width: 500px;
+    height: 130px;
+    position: absolute;
+    box-shadow: 1px 3px 15px 0px rgba(0, 0, 0, 0.51);
+    right: 30px;
+    animation: smooth 4000ms ease-in forwards;
+    bottom: 20px;
+  }
+
+  .modal-header-delete-account {
+    display: flex;
+    margin-top: 20px;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+
+  .modal-header-delete-account h3 {
+    color: #087f5b;
+    font-size: 16px;
+  }
+
+  .modal-verify-delete-account p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #343a40;
+    margin-top: 15px;
+    text-align: start;
+    
+  }
+
+  .image-modal-delete-account {
+    background-color: #087f5b;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    text-align: center;
+  }
+
+  .image-modal-delete-account img {
+    height: 11px;
+    width: 14px;
+  }
+
+  .acess-login-delete-account {
+    display: inline;
+    margin-left: 10px;
+  }
+
+  .container-modal-verify-delete-account {
+    width: 440px;
+    margin: 0 auto;
+  }
+
+  .modal-container-verify-create-pet {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .modal-verify-create-pet{
+    background: #fcfeff;
+    box-shadow: 0px 4px 30px -12px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    width: 500px;
+    height: 130px;
+    position: absolute;
+    box-shadow: 1px 3px 15px 0px rgba(0, 0, 0, 0.51);
+    right: 30px;
+    animation: smooth 4000ms ease-in forwards;
+    bottom: 20px;
+    
+  }
+
+  .modal-header-create-pet {
+    display: flex;
+    margin-top: 20px;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+
+  .modal-header-create-pet h3 {
+    color: #087f5b;
+    font-size: 16px;
+  }
+
+  .modal-verify-create-pet p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #343a40;
+    margin-top: 15px;
+    text-align: start;
+    
+  }
+
+  .image-modal-create-pet {
+    background-color: #087f5b;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    text-align: center;
+  }
+
+  .image-modal-create-pet img {
+    height: 11px;
+    width: 14px;
+  }
+
+  .acess-login-create-pet {
+    display: inline;
+    margin-left: 10px;
+  }
+
+  .container-modal-verify-create-pet {
+    width: 440px;
+    margin: 0 auto;
+  }
+
+  .modal-container-verify-att-card {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .modal-verify-att-card {
+    background: #fcfeff;
+    box-shadow: 0px 4px 30px -12px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    width: 500px;
+    height: 130px;
+    position: absolute;
+    box-shadow: 1px 3px 15px 0px rgba(0, 0, 0, 0.51);
+    right: 30px;
+    animation: smooth 4000ms ease-in forwards;
+    bottom: 20px;
+
+  }
+
+  .modal-header-att-card {
+    display: flex;
+    margin-top: 20px;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+
+  .modal-header-att-card h3 {
+    color: #087f5b;
+    font-size: 16px;
+  }
+
+  .modal-verify-att-card p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #343a40;
+    margin-top: 15px;
+    text-align: start;
+    
+  }
+
+  .image-modal-att-card {
+    background-color: #087f5b;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    text-align: center;
+  }
+
+  .image-modal-att-card img {
+    height: 11px;
+    width: 14px;
+  }
+
+  .acess-login-att-card {
+    display: inline;
+    margin-left: 10px;
+  }
+
+  .container-modal-verify-att-card {
+    width: 440px;
+    margin: 0 auto;
+  }
+
+  .hidden {
+    display: none;
+  }
+}
+
+@keyframes transition {
+  from {
+    opacity: 0;
+    transform: translateY(-70%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes smooth {
+  0% {
+    right: -500px;
+    bottom: 20px;
+  }
+  10% {
+    right: 20px;
+    bottom: 20px;
+  }
+  50% {
+    right: 20px;
+    bottom: 20px;
+  }
+  60% {
+    right: 20px;
+    bottom: 20px;
+  }
+  70% {
+    right: 20px;
+    bottom: 20px;
+  }
+  80% {
+    right: 50px;
+    bottom: 20px;
+  }
+  90% {
+    right: -500px;
+    bottom: 20px;
+  }
+  100% {
+    right: -500px;
+    bottom: 20px;
+  }
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }

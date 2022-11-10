@@ -1,12 +1,19 @@
-import { renderError } from "./homepage/login.js"
+import { renderError } from "./homepage/login.js";
 import {
   renderErrorEmail,
   verifyStatusOkRegister,
   resetFormRegister,
   toastVerifyRegister,
-} from "./homepage/register.js"
+} from "./homepage/register.js";
 
-import { closeModal, renderUserPets } from './profile/profile.js'
+import {
+  closeModal,
+  renderUserPets,
+  toastAttHeader,
+  toastDeleteHeader,
+  toastCreatePets,
+  toastAttPets,
+} from "./profile/profile.js";
 
 async function register(body) {
   try {
@@ -16,28 +23,28 @@ async function register(body) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(body),
-    })
-    const button = document.querySelector(".btn-login-modal-a")
-    button.innerHTML = `<img src='./src/assets/spinner.png' class='spinner-img'>`
+    });
+    const button = document.querySelector(".btn-login-modal-a");
+    button.innerHTML = `<img src='./src/assets/spinner.png' class='spinner-img'>`;
     if (request.ok) {
       setTimeout(() => {
-        toastVerifyRegister()
-      }, 3000)
+        toastVerifyRegister();
+      }, 3000);
       setTimeout(() => {
-        verifyStatusOkRegister()
-        resetFormRegister()
-        button.innerHTML = "Cadastrar"
-      }, 5000)
-      const data = await request.json()
-      return data
+        verifyStatusOkRegister();
+        resetFormRegister();
+        button.innerHTML = "Cadastrar";
+      }, 5000);
+      const data = await request.json();
+      return data;
     } else {
       setTimeout(() => {
-        renderErrorEmail()
-        button.innerHTML = "Cadastrar"
-      }, 3000)
+        renderErrorEmail();
+        button.innerHTML = "Cadastrar";
+      }, 3000);
     }
   } catch (err) {
-    console.log(err)
+    console.log(err);
   }
 }
 
@@ -52,35 +59,35 @@ async function login(body) {
         },
         body: JSON.stringify(body),
       }
-    )
-    const button = document.querySelector(".btn-login-modal")
-    button.innerHTML = `<img src='./src/assets/spinner.png' class='spinner-img'>`
+    );
+    const button = document.querySelector(".btn-login-modal");
+    button.innerHTML = `<img src='./src/assets/spinner.png' class='spinner-img'>`;
 
     if (request.ok) {
       const response = await request.json();
-      console.log(response.user)
-      console.log(response.token)
+      console.log(response.user);
+      console.log(response.token);
       localStorage.setItem("token", response.token);
       localStorage.setItem("user", JSON.stringify(response.user));
 
       setTimeout(() => {
-        window.location.replace("./src/pages/profile.html")
-      }, 2000)
+        window.location.replace("./src/pages/profile.html");
+      }, 2000);
     } else {
       setTimeout(() => {
-        renderError()
-        button.innerHTML = "Entrar"
-      }, 2000)
+        renderError();
+        button.innerHTML = "Entrar";
+      }, 2000);
     }
   } catch (err) {
-    console.log(err)
+    console.log(err);
   }
 }
 
-const baseURL = "https://m2-api-adot-pet.herokuapp.com"
+const baseURL = "https://m2-api-adot-pet.herokuapp.com";
 
 async function getApiUserInformations() {
-  const token = localStorage.getItem("token")
+  const token = localStorage.getItem("token");
 
   const options = {
     method: "GET",
@@ -88,22 +95,22 @@ async function getApiUserInformations() {
       "Content-Type": "application/json",
       Authorization: `Bearer ${token}`,
     },
-  }
+  };
   try {
-    const responseJson = await fetch(`${baseURL}/users/profile`, options)
+    const responseJson = await fetch(`${baseURL}/users/profile`, options);
     if (!responseJson.ok) {
-      const response = await responseJson.json()
-      console.log(response.message)
+      const response = await responseJson.json();
+      console.log(response.message);
     } else {
-      return await responseJson.json()
+      return await responseJson.json();
     }
   } catch (err) {
-    console.log(err)
+    console.log(err);
   }
 }
 
 async function getApiProfileUpdate(body) {
-  const token = localStorage.getItem("token")
+  const token = localStorage.getItem("token");
 
   const options = {
     method: "PATCH",
@@ -112,22 +119,35 @@ async function getApiProfileUpdate(body) {
       Authorization: `Bearer ${token}`,
     },
     body: JSON.stringify(body),
-  }
+  };
   try {
-    const responseJson = await fetch(`${baseURL}/users/profile`, options)
+
+    const modalContainer = document.querySelector('.modal-loading')
+    modalContainer.classList.remove('hidden')
+    const responseJson = await fetch(`${baseURL}/users/profile`, options);
     if (!responseJson.ok) {
-      const response = await responseJson.json()
-      console.log(response.message)
+      const response = await responseJson.json();
+      console.log(response.message);
     } else {
-      return await responseJson.json()
+
+        setTimeout(() => {
+            toastAttHeader()    
+            
+        }, 200);
+        
+
+        setTimeout(() => {
+            modalContainer.classList.add('hidden')
+        }, 3000)
+        return await responseJson.json();
     }
   } catch (err) {
-    console.log(err)
+    console.log(err);
   }
 }
 
-async function getApiDeleteUser(body) {
-  const token = localStorage.getItem("token")
+async function getApiDeleteUser() {
+  const token = localStorage.getItem("token");
 
   const options = {
     method: "DELETE",
@@ -135,22 +155,28 @@ async function getApiDeleteUser(body) {
       "Content-Type": "application/json",
       Authorization: `Bearer ${token}`,
     },
-  }
+  };
   try {
-    const responseJson = await fetch(`${baseURL}/users/profile`, options)
+    const modalContainer = document.querySelector('.modal-loading')
+    modalContainer.classList.remove('hidden')
+    const responseJson = await fetch(`${baseURL}/users/profile`, options);
     if (!responseJson.ok) {
-      const response = await responseJson.json()
-      console.log(response.message)
+      const response = await responseJson.json();
+      console.log(response.message);
     } else {
-      return await responseJson.json()
+        toastDeleteHeader()
+        setTimeout(() => {
+            modalContainer.classList.add('hidden')
+          }, 4000);
+      return await responseJson.json();
     }
   } catch (err) {
-    console.log(err)
+    console.log(err);
   }
 }
 
 async function getApiUserPets() {
-  const token = localStorage.getItem("token")
+  const token = localStorage.getItem("token");
 
   const options = {
     method: "GET",
@@ -158,89 +184,89 @@ async function getApiUserPets() {
       "Content-Type": "application/json",
       Authorization: `Bearer ${token}`,
     },
-  }
+  };
   try {
-    const responseJson = await fetch(`${baseURL}/pets/my_pets`, options)
+    const responseJson = await fetch(`${baseURL}/pets/my_pets`, options);
     if (!responseJson.ok) {
-      const response = await responseJson.json()
-      console.log(response.message)
+      const response = await responseJson.json();
+      console.log(response.message);
     } else {
-      return await responseJson.json()
+      return await responseJson.json();
     }
   } catch (err) {
-    console.log(err)
+    console.log(err);
   }
 }
 
 async function getReadAllAdoptions() {
-  const token = localStorage.getItem("token")
+  const token = localStorage.getItem("token");
 
   const options = {
     method: "GET",
     headers: {
       Authorization: `Bearer ${token}`,
     },
-  }
+  };
 
   try {
-    const responseJson = await fetch(`${baseURL}/adoptions`, options)
+    const responseJson = await fetch(`${baseURL}/adoptions`, options);
     if (!responseJson.ok) {
-      console.log(responseJson.message)
+      console.log(responseJson.message);
     } else {
-      return await responseJson.json()
+      return await responseJson.json();
     }
   } catch (err) {
-    console.log(err)
+    console.log(err);
   }
 }
 
 async function getReadAdoptionsById(id) {
-  const token = localStorage.getItem("token")
+  const token = localStorage.getItem("token");
 
   const options = {
     method: "GET",
     headers: {
       Authorization: `Bearer ${token}`,
     },
-  }
+  };
   try {
-    const responseJson = await fetch(`${baseURL}/adoptions/${id}`, options)
+    const responseJson = await fetch(`${baseURL}/adoptions/${id}`, options);
     if (!responseJson.ok) {
-      console.log(responseJson.message)
+      console.log(responseJson.message);
     } else {
-      return await responseJson.json()
+      return await responseJson.json();
     }
   } catch (err) {
-    console.log(err)
+    console.log(err);
   }
 }
 
 async function getReadMyAdoptions() {
-  const token = localStorage.getItem("token")
+  const token = localStorage.getItem("token");
 
   const options = {
     method: "GET",
     headers: {
       Authorization: `Bearer ${token}`,
     },
-  }
+  };
   try {
     const responseJson = await fetch(
       `${baseURL}/adoptions/myAdoptions`,
       options
-    )
+    );
     if (!responseJson.ok) {
-      console.log(responseJson.message)
+      console.log(responseJson.message);
     } else {
-      return await responseJson.json()
+      return await responseJson.json();
     }
   } catch (err) {
-    console.log(err)
+    console.log(err);
   }
 }
 
 async function patchUpdateAdoptionById(id, body) {
-  const token = localStorage.getItem("token")
+  const token = localStorage.getItem("token");
 
   const options = {
     method: "PATCH",
@@ -249,48 +275,48 @@ async function patchUpdateAdoptionById(id, body) {
       Authorization: `Bearer ${token}`,
     },
     body: JSON.stringify(body),
-  }
+  };
   try {
     const responseJson = await fetch(
       `${baseURL}/adoptions/update/${id}`,
       options
-    )
+    );
     if (!responseJson.ok) {
-      console.log(responseJson.message)
+      console.log(responseJson.message);
     } else {
-      return await responseJson.json()
+      return await responseJson.json();
     }
   } catch (err) {
-    console.log(err)
+    console.log(err);
   }
 }
 
 async function deleteAdoptionById(id) {
-  const token = localStorage.getItem("token")
+  const token = localStorage.getItem("token");
 
   const options = {
     method: "DELETE",
     headers: {
       Authorization: `Bearer ${token}`,
     },
-  }
+  };
   try {
     const responseJson = await fetch(
       `${baseURL}/adoptions/delete/${id}`,
       options
-    )
+    );
     if (!responseJson.ok) {
-      console.log(responseJson.message)
+      console.log(responseJson.message);
     } else {
-      return await responseJson.json()
+      return await responseJson.json();
     }
   } catch (err) {
-    console.log(err)
+    console.log(err);
   }
 }
 
 async function getApiRegisterPet(body) {
-  const token = localStorage.getItem("token")
+  const token = localStorage.getItem("token");
 
   const options = {
     method: "POST",
@@ -299,24 +325,36 @@ async function getApiRegisterPet(body) {
       Authorization: `Bearer ${token}`,
     },
     body: JSON.stringify(body),
-  }
+  };
   try {
-    const responseJson = await fetch(`${baseURL}/pets`, options)
+    
+    const modalContainer = document.querySelector('.modal-loading')
+    modalContainer.classList.remove('hidden')
+    const responseJson = await fetch(`${baseURL}/pets`, options);
     if (!responseJson.ok) {
-      const response = await responseJson.json()
-      console.log(response.message)
+      const response = await responseJson.json();
+      console.log(response.message);
     } else {
-        closeModal()
-        renderUserPets(await getApiUserPets())
-      return await responseJson.json()
+        toastCreatePets()
+        setTimeout(() => {
+            modalContainer.classList.add('hidden')
+            closeModal();  
+        }, 4000);
+        setTimeout(async () => {
+            renderUserPets(await getApiUserPets());
+        }, 4180);
+     
+     
+     
+      return await responseJson.json();
     }
   } catch (err) {
-    console.log(err)
+    console.log(err);
   }
 }
 
 async function getApiUpdatePet(body, id) {
-  const token = localStorage.getItem("token")
+  const token = localStorage.getItem("token");
 
   const options = {
     method: "PATCH",
@@ -325,17 +363,24 @@ async function getApiUpdatePet(body, id) {
       Authorization: `Bearer ${token}`,
     },
     body: JSON.stringify(body),
-  }
+  };
   try {
-    const responseJson = await fetch(`${baseURL}/pets/${id}`, options)
+    const modalContainer = document.querySelector('.modal-loading')
+    modalContainer.classList.remove('hidden')
+    const responseJson = await fetch(`${baseURL}/pets/${id}`, options);
     if (!responseJson.ok) {
-      const response = await responseJson.json()
-      console.log(response.message)
+      const response = await responseJson.json();
+      console.log(response.message);
     } else {
-      return await responseJson.json()
+        toastAttPets()
+      setTimeout(() => {
+        modalContainer.classList.add('hidden')
+      }, 4000);
+     
+      return await responseJson.json();
     }
   } catch (err) {
-    console.log(err)
+    console.log(err);
   }
 }
 
@@ -353,4 +398,4 @@ export {
   getApiDeleteUser,
   getApiRegisterPet,
   getApiUpdatePet,
-}
+};

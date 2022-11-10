@@ -188,8 +188,13 @@ function renderUserPets(pets) {
           })
           const response = await getApiUpdatePet(body, pet.id)
           if (response) {
-            closeModal()
-            renderUserPets(await getApiUserPets())
+            setTimeout(() => {
+                closeModal()
+            }, 4000);
+            setTimeout(async () => {
+                renderUserPets(await getApiUserPets())
+            }, 4200)
+            
           }
         })
       })
@@ -236,7 +241,10 @@ async function updateUserInformationsEvent() {
       })
       const response = await getApiProfileUpdate(body)
       if (response) {
-        closeModal()
+        setTimeout(() => {
+           closeModal()
+        }, 3000)
+        
         renderUserInformations(await getApiUserInformations())
       }
     })
@@ -267,7 +275,11 @@ async function deleteUserEvent() {
     buttonConfirm.addEventListener("click", async () => {
       const response = await getApiDeleteUser()
       if (response) {
+       setTimeout(() => {
         window.location.replace("../../index.html")
+        localStorage.removeItem('user')
+        localStorage.removeItem('token')
+       }, 4000); 
       }
     })
   })
@@ -319,13 +331,40 @@ async function registerPetEvent() {
       })
       console.log(body)
       await getApiRegisterPet(body)
-      
-        
-      
-      
-    })
-   
+      }) 
   })
+}
+
+function toastAttHeader() {
+    const modal = document.querySelector('.modal-container-verify-att-header')
+    modal.classList.remove('hidden')
+     setTimeout(() => {
+       modal.classList.add('hidden')
+    }, 4000)
+}
+
+function toastDeleteHeader() {
+    const modal = document.querySelector('.modal-container-verify-delete-account')
+    modal.classList.remove('hidden')
+     setTimeout(() => {
+       modal.classList.add('hidden')
+    }, 4000)
+}
+
+function toastCreatePets() {
+    const modal = document.querySelector('.modal-container-verify-create-pet')
+    modal.classList.remove('hidden')
+     setTimeout(() => {
+       modal.classList.add('hidden')
+    }, 4000)
+}
+
+function toastAttPets() {
+    const modal = document.querySelector('.modal-container-verify-att-card')
+    modal.classList.remove('hidden')
+    setTimeout(() => {
+        modal.classList.add('hidden')
+     }, 4000)
 }
 
 async function readToAdoptPets() {
@@ -342,5 +381,9 @@ export {
   deleteUserEvent,
   registerPetEvent,
   readToAdoptPets,
-  closeModal
+  closeModal,
+  toastAttHeader,
+  toastDeleteHeader,
+  toastCreatePets,
+  toastAttPets
 }
