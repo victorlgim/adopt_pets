@@ -46,4 +46,25 @@ function logoutPrincipal () {
     })
 }
 
-export { logoutPrincipal,renderCardsPrincipal }
+function toggleButtonAdopt() {
+   const buttons = document.querySelectorAll('.btn-adopt')
+   const div = document.querySelector('.div-btn-adopt')
+   buttons.forEach(e => {
+    e.addEventListener('click', event => {
+        if (event.target.innerText == 'Me adote') {
+            e.innerText = 'Adotado'
+            e.classList.remove('btn-adopt')
+            e.classList.add('btn-adopt-on')
+            
+        } else {
+            e.innerText = 'Me adote'
+            e.classList.remove('btn-adopt-on')
+            e.classList.add('btn-adopt')
+        
+            
+        }
+    })
+   })
+}
+
+export { logoutPrincipal, renderCardsPrincipal, toggleButtonAdopt }
