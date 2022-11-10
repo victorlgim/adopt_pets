@@ -6,6 +6,8 @@ import {
   toastVerifyRegister,
 } from "./homepage/register.js"
 
+import { closeModal, renderUserPets } from './profile/profile.js'
+
 async function register(body) {
   try {
     const request = await fetch(`https://m2-api-adot-pet.herokuapp.com/users`, {
@@ -304,6 +306,8 @@ async function getApiRegisterPet(body) {
       const response = await responseJson.json()
       console.log(response.message)
     } else {
+        closeModal()
+        renderUserPets(await getApiUserPets())
       return await responseJson.json()
     }
   } catch (err) {

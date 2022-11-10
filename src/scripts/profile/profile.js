@@ -318,12 +318,13 @@ async function registerPetEvent() {
         }
       })
       console.log(body)
-      const response = await getApiRegisterPet(body)
-      if (response) {
-        closeModal()
-        renderUserPets(await getApiUserPets())
-      }
+      await getApiRegisterPet(body)
+      
+        
+      
+      
     })
+   
   })
 }
 
@@ -340,5 +341,6 @@ export {
   updateUserInformationsEvent,
   deleteUserEvent,
   registerPetEvent,
-  readToAdoptPets
+  readToAdoptPets,
+  closeModal
 }
