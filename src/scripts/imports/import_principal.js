@@ -10,7 +10,7 @@ logoutPrincipal();
 validateRenderPrincipal();
 setTimeout(() => {
   toggleButtonAdopt();
-}, 1000);
+}, 1400);
 
 const token = localStorage.getItem("token");
 
