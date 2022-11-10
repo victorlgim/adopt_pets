@@ -210,9 +210,9 @@ footer > p {
 }
 
 @media (min-width: 1070px) {
-    .cards-list {
-        justify-content: start;
-    }
+  .cards-list {
+    justify-content: start;
+  }
 }
 
 @media (min-width: 31.875rem) {
@@ -264,65 +264,65 @@ footer > p {
 }
 
 .modal-loading {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-  }
-  
-  .spinner {
-    width: 100px;
-    height: 50px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    margin: auto;
-    text-align: center;
-  }
-  
-  .loading {
-    width: 20px;
-    height: 20px;
-    background-color: #364fc7;
-    border-radius: 50%;
-    display: inline-block;
-    animation: motion 2.2s infinite;
-  }
-  
-  .loading-msg {
-    color: #fff;
-    margin-top: 5px;
-    font-family: sans-serif;
-    letter-spacing: 3px;
-    font-size: 10px;
-  }
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
 
-  .hidden {
-    display: none;
-  }
+.spinner {
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+}
 
-  @keyframes motion {
-    0% {
-      transform: translateX(0) scale(1);
-    }
-    25% {
-      transform: translateX(-50px) scale(0.3);
-    }
-    50% {
-      transform: translateX(0) scale(1);
-    }
-    75% {
-      transform: translateX(50px) scale(0.3);
-    }
-    100% {
-      transform: translateX(0) scale(1);
-    }
+.loading {
+  width: 20px;
+  height: 20px;
+  background-color: #364fc7;
+  border-radius: 50%;
+  display: inline-block;
+  animation: motion 2.2s infinite;
+}
+
+.loading-msg {
+  color: #fff;
+  margin-top: 5px;
+  font-family: sans-serif;
+  letter-spacing: 3px;
+  font-size: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes motion {
+  0% {
+    transform: translateX(0) scale(1);
   }
+  25% {
+    transform: translateX(-50px) scale(0.3);
+  }
+  50% {
+    transform: translateX(0) scale(1);
+  }
+  75% {
+    transform: translateX(50px) scale(0.3);
+  }
+  100% {
+    transform: translateX(0) scale(1);
+  }
+}

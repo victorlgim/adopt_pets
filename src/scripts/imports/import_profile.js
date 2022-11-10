@@ -1,21 +1,21 @@
-// CHAMAR AS FUNÇÕES DE DROPDOWN NAS RESPECTIVAS PASTAS DO IMPORT
-
 import {
-  initPerfil,
-  initUserPets,
   logoutEvent,
-  renderUserInformations,
-  renderUserPets,
   updateUserInformationsEvent,
   deleteUserEvent,
   registerPetEvent,
-  readToAdoptPets
-} from "../profile/profile.js"
+  readToAdoptPets,
+  verifyRenderStatus,
+} from "../profile/profile.js";
 
-logoutEvent()
-renderUserInformations(initPerfil)
-renderUserPets(initUserPets)
-updateUserInformationsEvent()
-deleteUserEvent()
-registerPetEvent()
-readToAdoptPets()
+logoutEvent();
+verifyRenderStatus();
+updateUserInformationsEvent();
+deleteUserEvent();
+registerPetEvent();
+readToAdoptPets();
+
+const token = localStorage.getItem("token");
+
+if (token == null) {
+  window.location.replace("../../index.html");
+}

@@ -5,7 +5,6 @@ import {
   getApiDeleteUser,
   getApiRegisterPet,
   getApiUpdatePet,
-  getReadMyAdoptions
 } from "../requests.js"
 
 function openModal(child) {
@@ -55,9 +54,13 @@ function closeModal() {
   div.remove()
 }
 
-const token = localStorage.getItem("token")
-export const initPerfil = await getApiUserInformations()
-export const initUserPets = await getApiUserPets()
+async function verifyRenderStatus() {
+  const data = await getApiUserInformations()
+  const dataTwo = await getApiUserPets()
+  renderUserInformations(data)
+  renderUserPets(dataTwo)
+}
+
 
 function logoutEvent() {
   const button = document.querySelector("#logout")
@@ -385,5 +388,6 @@ export {
   toastAttHeader,
   toastDeleteHeader,
   toastCreatePets,
-  toastAttPets
+  toastAttPets,
+  verifyRenderStatus
 }

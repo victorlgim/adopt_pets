@@ -1,13 +1,19 @@
-import { getReadAllAdoptions } from '../requests.js'
-import { switchButtons } from '../dropdown.js'
-import { logoutPrincipal, renderCardsPrincipal, toggleButtonAdopt } from '../principal/principal.js'
+import { switchButtons } from "../dropdown.js";
+import {
+  logoutPrincipal,
+  validateRenderPrincipal,
+  toggleButtonAdopt,
+} from "../principal/principal.js";
 
-switchButtons()
-logoutPrincipal()
-renderCardsPrincipal(await getReadAllAdoptions())
-toggleButtonAdopt()
+switchButtons();
+logoutPrincipal();
+validateRenderPrincipal();
+setTimeout(() => {
+  toggleButtonAdopt();
+}, 1000);
 
+const token = localStorage.getItem("token");
 
-
-
-
+if (token == null) {
+  window.location.replace("../../index.html");
+}

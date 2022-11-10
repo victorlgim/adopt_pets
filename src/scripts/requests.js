@@ -121,25 +121,21 @@ async function getApiProfileUpdate(body) {
     body: JSON.stringify(body),
   };
   try {
-
-    const modalContainer = document.querySelector('.modal-loading')
-    modalContainer.classList.remove('hidden')
+    const modalContainer = document.querySelector(".modal-loading");
+    modalContainer.classList.remove("hidden");
     const responseJson = await fetch(`${baseURL}/users/profile`, options);
     if (!responseJson.ok) {
       const response = await responseJson.json();
       console.log(response.message);
     } else {
+      setTimeout(() => {
+        toastAttHeader();
+      }, 200);
 
-        setTimeout(() => {
-            toastAttHeader()    
-            
-        }, 200);
-        
-
-        setTimeout(() => {
-            modalContainer.classList.add('hidden')
-        }, 3000)
-        return await responseJson.json();
+      setTimeout(() => {
+        modalContainer.classList.add("hidden");
+      }, 3000);
+      return await responseJson.json();
     }
   } catch (err) {
     console.log(err);
@@ -157,17 +153,17 @@ async function getApiDeleteUser() {
     },
   };
   try {
-    const modalContainer = document.querySelector('.modal-loading')
-    modalContainer.classList.remove('hidden')
+    const modalContainer = document.querySelector(".modal-loading");
+    modalContainer.classList.remove("hidden");
     const responseJson = await fetch(`${baseURL}/users/profile`, options);
     if (!responseJson.ok) {
       const response = await responseJson.json();
       console.log(response.message);
     } else {
-        toastDeleteHeader()
-        setTimeout(() => {
-            modalContainer.classList.add('hidden')
-          }, 4000);
+      toastDeleteHeader();
+      setTimeout(() => {
+        modalContainer.classList.add("hidden");
+      }, 4000);
       return await responseJson.json();
     }
   } catch (err) {
@@ -327,25 +323,22 @@ async function getApiRegisterPet(body) {
     body: JSON.stringify(body),
   };
   try {
-    
-    const modalContainer = document.querySelector('.modal-loading')
-    modalContainer.classList.remove('hidden')
+    const modalContainer = document.querySelector(".modal-loading");
+    modalContainer.classList.remove("hidden");
     const responseJson = await fetch(`${baseURL}/pets`, options);
     if (!responseJson.ok) {
       const response = await responseJson.json();
       console.log(response.message);
     } else {
-        toastCreatePets()
-        setTimeout(() => {
-            modalContainer.classList.add('hidden')
-            closeModal();  
-        }, 4000);
-        setTimeout(async () => {
-            renderUserPets(await getApiUserPets());
-        }, 4180);
-     
-     
-     
+      toastCreatePets();
+      setTimeout(() => {
+        modalContainer.classList.add("hidden");
+        closeModal();
+      }, 4000);
+      setTimeout(async () => {
+        renderUserPets(await getApiUserPets());
+      }, 4180);
+
       return await responseJson.json();
     }
   } catch (err) {
@@ -365,18 +358,18 @@ async function getApiUpdatePet(body, id) {
     body: JSON.stringify(body),
   };
   try {
-    const modalContainer = document.querySelector('.modal-loading')
-    modalContainer.classList.remove('hidden')
+    const modalContainer = document.querySelector(".modal-loading");
+    modalContainer.classList.remove("hidden");
     const responseJson = await fetch(`${baseURL}/pets/${id}`, options);
     if (!responseJson.ok) {
       const response = await responseJson.json();
       console.log(response.message);
     } else {
-        toastAttPets()
+      toastAttPets();
       setTimeout(() => {
-        modalContainer.classList.add('hidden')
+        modalContainer.classList.add("hidden");
       }, 4000);
-     
+
       return await responseJson.json();
     }
   } catch (err) {

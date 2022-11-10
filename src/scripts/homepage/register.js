@@ -19,13 +19,12 @@ async function registerUsers() {
     console.log(body);
     pwd.value = "";
     await register(body);
-
   });
 }
 
 function resetFormRegister() {
-    const form = document.querySelector(".form-login-a");
-    form.reset()
+  const form = document.querySelector(".form-login-a");
+  form.reset();
 }
 
 function renderErrorEmail() {
@@ -47,19 +46,26 @@ function cleanInputEmail() {
 }
 
 function verifyStatusOkRegister() {
-    const modalRegister = document.querySelector('.modal-container-a') 
-    const modalLogin = document.querySelector('.modal-container') 
+  const modalRegister = document.querySelector(".modal-container-a");
+  const modalLogin = document.querySelector(".modal-container");
 
-    modalRegister.classList.add('hidden')
-    modalLogin.classList.remove('hidden')
+  modalRegister.classList.add("hidden");
+  modalLogin.classList.remove("hidden");
 }
 
 function toastVerifyRegister() {
-    const modal = document.querySelector('.modal-container-verify')
-    modal.classList.remove('hidden')
-    setTimeout(() => {
-       modal.classList.add('hidden')
-    }, 4000)
+  const modal = document.querySelector(".modal-container-verify");
+  modal.classList.remove("hidden");
+  setTimeout(() => {
+    modal.classList.add("hidden");
+  }, 4000);
 }
 
-export { registerUsers, renderErrorEmail, cleanInputEmail, verifyStatusOkRegister, resetFormRegister, toastVerifyRegister };
+export {
+  registerUsers,
+  renderErrorEmail,
+  cleanInputEmail,
+  verifyStatusOkRegister,
+  resetFormRegister,
+  toastVerifyRegister,
+};

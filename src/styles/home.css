@@ -1033,7 +1033,6 @@ footer > p {
     color: #343a40;
     margin-top: 15px;
     text-align: start;
-    
   }
 
   .image-modal {
@@ -1375,36 +1374,36 @@ footer > p {
 }
 
 @keyframes smooth {
-    0% {
-      right: -500px;
-      bottom: 20px;
-    }
-    10% {
-      right: 20px;
-      bottom: 20px;
-    }
-    50% {
-      right: 20px;
-      bottom: 20px;
-    }
-    60% {
-      right: 20px;
-      bottom: 20px;
-    }
-    70% {
-      right: 20px;
-      bottom: 20px;
-    }
-    80% {
-      right: 50px;
-      bottom: 20px;
-    }
-    90% {
-      right: -500px;
-      bottom: 20px;
-    }
-    100% {
-      right: -500px;
-      bottom: 20px;
-    }
+  0% {
+    right: -500px;
+    bottom: 20px;
   }
+  10% {
+    right: 20px;
+    bottom: 20px;
+  }
+  50% {
+    right: 20px;
+    bottom: 20px;
+  }
+  60% {
+    right: 20px;
+    bottom: 20px;
+  }
+  70% {
+    right: 20px;
+    bottom: 20px;
+  }
+  80% {
+    right: 50px;
+    bottom: 20px;
+  }
+  90% {
+    right: -500px;
+    bottom: 20px;
+  }
+  100% {
+    right: -500px;
+    bottom: 20px;
+  }
+}

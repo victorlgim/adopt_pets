@@ -1,141 +1,189 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homepage - Kenzie Pets</title>
-    <link rel="stylesheet" href="./src/styles/globalStyles.css">
-    <link rel="stylesheet" href="./src/styles/home.css">
-    <script type='module' defer src="./src/scripts/imports/import_home.js"></script>
-</head>
-<body>
-   
-
+    <link rel="stylesheet" href="./src/styles/globalStyles.css" />
+    <link rel="stylesheet" href="./src/styles/home.css" />
+    <script
+      type="module"
+      defer
+      src="./src/scripts/imports/import_home.js"
+    ></script>
+  </head>
+  <body>
     <div class="modal-container-verify hidden">
-        <div class="modal-verify">
-          <div class="container-modal-verify">
-            <div class="modal-header">
-              <div class="image-modal">
-                <img src="./src/assets/check.png" alt="" />
-              </div>
-              <h3>Sua conta foi criada com sucesso!</h3>
+      <div class="modal-verify">
+        <div class="container-modal-verify">
+          <div class="modal-header">
+            <div class="image-modal">
+              <img src="./src/assets/check.png" alt="" />
             </div>
-            <p>
-              Agora você pode acessar os conteúdos utilizando seu usuário e senha
-              na página de login 
-            </p>
+            <h3>Sua conta foi criada com sucesso!</h3>
           </div>
+          <p>
+            Agora você pode acessar os conteúdos utilizando seu usuário e senha
+            na página de login
+          </p>
         </div>
       </div>
+    </div>
 
     <div class="modal-container-a hidden">
-        <div class="modal-a">
-            <div class="top-modal-a">
-                <div class="flex-end-modal-a">
-                    <img src="./src/assets/close.png" alt="" class="close-top-modal-a">
-                </div>
-                <div class="container-modal-a">
-                  <h2 class="login-modal-a">Cadastrar</h2>
-                  <form class="form-login-a">
-                    <input type="text" id="name" class="email-login-modal-a" placeholder="Nome" required>
-                    <input type="email" id="email" class="password-login-modal-a" placeholder="Email" required>
-                    <span class="msg-error-email hidden">O email já está em uso.</span>
-                    <input type="password" id="password" class="password-login-modal-a" placeholder="Senha" required>
-                    <input type="text" id="avatar_url" class="password-login-modal-a" placeholder="URL do avatar" required>
-                    <button class="btn-login-modal-a">Cadastrar</button>
-                  </form>
-                  <div class="flex-bottom-modal-login-a">
-                  <span class="msg-bottom-modal-a">Já possui conta?</span>
-                  <button class="ancora-modal-login-a">Clique aqui para fazer o login.</button>
-                </div>
-                </div>            
-            </div>
-            <div class="bottom-modal-a"></div>
-         </div>
-     </div>
-
-     <div class="modal-container hidden">
-        <div class="modal">
-            <div class="top-modal">
-                <div class="flex-end-modal">
-                    <img src="./src/assets/close.png" alt="" class="close-top-modal">
-                </div>
-                <div class="container-modal">
-                  <h2 class="login-modal">Login</h2>
-                  <form class="form-login">
-                    <input type="email" id="email" class="email-login-modal" placeholder="E-mail" required>
-                    <input type="password" id="password" class="password-login-modal" placeholder="•••••••••••" required>
-                    <span class="msg-error hidden">A senha está incorreta</span>
-                    <button class="btn-login-modal">Entrar</button>
-                  </form>
-                  <div class="flex-bottom-modal-login">
-                  <span class="msg-bottom-modal">Não tem cadastro?</span>
-                  <button class="ancora-modal-login">Clique aqui para se cadastrar.</button>
-                </div>
-                </div>            
-            </div>
-            <div class="bottom-modal"></div>
-         </div>
-     </div>
-
-    <header class="header">
-        <div class="container-header">
-          <div class="top-header">
-            <div class="title-header">
-              <h1>KenziePets</h1>
-            </div>
-            <div class="menu-header">
-              <img src="./src/assets/vector.png" alt="" class="menu-three" />
-            </div>
-            <div class="modal-close-x hidden">
-              <img src="./src/assets/X.png" alt="" class="close-dropdown-x" />
-            </div>
-            <div class="buttons-header hidden">
-              <button class="btn-login-header">Register</button>
-              <button class="btn-register-header">Login</button>
-            </div>
+      <div class="modal-a">
+        <div class="top-modal-a">
+          <div class="flex-end-modal-a">
+            <img
+              src="./src/assets/close.png"
+              alt=""
+              class="close-top-modal-a"
+            />
           </div>
-          <div class="buttons-dropdown hidden">
-            <button class="btn-login-dropdown">Register</button>
-            <button class="btn-register-dropdown">Login</button>
+          <div class="container-modal-a">
+            <h2 class="login-modal-a">Cadastrar</h2>
+            <form class="form-login-a">
+              <input
+                type="text"
+                id="name"
+                class="email-login-modal-a"
+                placeholder="Nome"
+                required
+              />
+              <input
+                type="email"
+                id="email"
+                class="password-login-modal-a"
+                placeholder="Email"
+                required
+              />
+              <span class="msg-error-email hidden"
+                >O email já está em uso.</span
+              >
+              <input
+                type="password"
+                id="password"
+                class="password-login-modal-a"
+                placeholder="Senha"
+                required
+              />
+              <input
+                type="text"
+                id="avatar_url"
+                class="password-login-modal-a"
+                placeholder="URL do avatar"
+                required
+              />
+              <button class="btn-login-modal-a">Cadastrar</button>
+            </form>
+            <div class="flex-bottom-modal-login-a">
+              <span class="msg-bottom-modal-a">Já possui conta?</span>
+              <button class="ancora-modal-login-a">
+                Clique aqui para fazer o login.
+              </button>
+            </div>
           </div>
         </div>
-      </header>
-      <main class="container">
-        <ul class="ul-pets">
-            <li class="li-pets">
-               <img class="img-card" src="./src/assets/a.png" alt="">
-               <h3 class="title-card">Bidu</h3>
-               <small class="small-card">Cachorro</small>
-            </li>
-            <li class="li-pets">
-                <img class="img-card" src="./src/assets/b.png" alt="">
-                <h3 class="title-card">Mingau</h3>
-                <small class="small-card">Gato</small>
-             </li>
-             <li class="li-pets">
-                <img class="img-card" src="./src/assets/c.png" alt="">
-                <h3 class="title-card">Frajola</h3>
-                <small class="small-card">Gato</small>
-             </li>
-             <li class="li-pets">
-                <img class="img-card" src="./src/assets/d.png" alt="">
-                <h3 class="title-card">Toby</h3>
-                <small class="small-card">Cachorro</small>
-             </li>
-             <li class="li-pets">
-                <img class="img-card" src="./src/assets/e.png" alt="">
-                <h3 class="title-card">Bob</h3>
-                <small class="small-card">Cachorro</small>
-             </li>
-             <li class="li-pets">
-                <img class="img-card" src="./src/assets/f.png" alt="">
-                <h3 class="title-card">Tom</h3>
-                <small class="small-card">Gato</small>
-             </li>
-        </ul>
-      </main>
-      <footer><p>KenziePets | Todos os Direitos Reservados</p></footer>
-</body>
+        <div class="bottom-modal-a"></div>
+      </div>
+    </div>
+
+    <div class="modal-container hidden">
+      <div class="modal">
+        <div class="top-modal">
+          <div class="flex-end-modal">
+            <img src="./src/assets/close.png" alt="" class="close-top-modal" />
+          </div>
+          <div class="container-modal">
+            <h2 class="login-modal">Login</h2>
+            <form class="form-login">
+              <input
+                type="email"
+                id="email"
+                class="email-login-modal"
+                placeholder="E-mail"
+                required
+              />
+              <input
+                type="password"
+                id="password"
+                class="password-login-modal"
+                placeholder="•••••••••••"
+                required
+              />
+              <span class="msg-error hidden">A senha está incorreta</span>
+              <button class="btn-login-modal">Entrar</button>
+            </form>
+            <div class="flex-bottom-modal-login">
+              <span class="msg-bottom-modal">Não tem cadastro?</span>
+              <button class="ancora-modal-login">
+                Clique aqui para se cadastrar.
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-modal"></div>
+      </div>
+    </div>
+
+    <header class="header">
+      <div class="container-header">
+        <div class="top-header">
+          <div class="title-header">
+            <h1>KenziePets</h1>
+          </div>
+          <div class="menu-header">
+            <img src="./src/assets/vector.png" alt="" class="menu-three" />
+          </div>
+          <div class="modal-close-x hidden">
+            <img src="./src/assets/X.png" alt="" class="close-dropdown-x" />
+          </div>
+          <div class="buttons-header hidden">
+            <button class="btn-login-header">Register</button>
+            <button class="btn-register-header">Login</button>
+          </div>
+        </div>
+        <div class="buttons-dropdown hidden">
+          <button class="btn-login-dropdown">Register</button>
+          <button class="btn-register-dropdown">Login</button>
+        </div>
+      </div>
+    </header>
+    <main class="container">
+      <ul class="ul-pets">
+        <li class="li-pets">
+          <img class="img-card" src="./src/assets/a.png" alt="" />
+          <h3 class="title-card">Bidu</h3>
+          <small class="small-card">Cachorro</small>
+        </li>
+        <li class="li-pets">
+          <img class="img-card" src="./src/assets/b.png" alt="" />
+          <h3 class="title-card">Mingau</h3>
+          <small class="small-card">Gato</small>
+        </li>
+        <li class="li-pets">
+          <img class="img-card" src="./src/assets/c.png" alt="" />
+          <h3 class="title-card">Frajola</h3>
+          <small class="small-card">Gato</small>
+        </li>
+        <li class="li-pets">
+          <img class="img-card" src="./src/assets/d.png" alt="" />
+          <h3 class="title-card">Toby</h3>
+          <small class="small-card">Cachorro</small>
+        </li>
+        <li class="li-pets">
+          <img class="img-card" src="./src/assets/e.png" alt="" />
+          <h3 class="title-card">Bob</h3>
+          <small class="small-card">Cachorro</small>
+        </li>
+        <li class="li-pets">
+          <img class="img-card" src="./src/assets/f.png" alt="" />
+          <h3 class="title-card">Tom</h3>
+          <small class="small-card">Gato</small>
+        </li>
+      </ul>
+    </main>
+    <footer><p>KenziePets | Todos os Direitos Reservados</p></footer>
+  </body>
 </html>
