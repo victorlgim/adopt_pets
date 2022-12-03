@@ -3,6 +3,7 @@
 Desafio/Projeto realizado em equipe que consistia na criação de uma aplicação de livre escolha utilizando Javascript Vanilla em apenas três dias.
 
 https://victorglim.github.io/adopt-pets/
+
 https://www.linkedin.com/posts/vitor-lima_projeto-kenzie-pets-finalizado-nakenzie-activity-6996575413133021185-N9T8?utm_source=share&utm_medium=member_desktop
 
 ![1](https://user-images.githubusercontent.com/109770689/205453982-ee16dd10-cfc7-4170-a942-6833bcfb0b13.png)
