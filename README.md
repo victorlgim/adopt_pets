@@ -2,7 +2,7 @@
 
 Desafio/Projeto realizado em equipe que consistia na criação de uma aplicação de livre escolha utilizando Javascript Vanilla em apenas três dias.
 
-https://victorglim.github.io/adopt-pets/
+https://adopt-pets-phi.vercel.app/
 
 Criamos o Adopt Pets, que é uma plataforma gratuita onde os usuários podem se cadastrar e dentro do seu painel de controle, registrar pet's novos ou até mesmo adotar pet's de outras pessoas.
 
